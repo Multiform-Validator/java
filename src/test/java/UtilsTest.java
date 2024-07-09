@@ -1,4 +1,4 @@
-import io.github.gabriel_logan.multiform_validator.Utils;
+import io.github.multiform_validator.Utils;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;

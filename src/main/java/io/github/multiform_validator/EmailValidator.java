@@ -1,4 +1,4 @@
-package io.github.gabriel_logan.multiform_validator;
+package io.github.multiform_validator;
 
 import java.util.Arrays;
 import java.util.HashSet;
