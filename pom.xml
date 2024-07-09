@@ -6,7 +6,7 @@
 
     <groupId>io.github</groupId>
     <artifactId>multiform-validator</artifactId>
-    <version>0.0.1-TEST</version>
+    <version>0.0.1</version>
 
     <name>Multiform Validator</name>
     <description>
