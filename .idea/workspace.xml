@@ -4,33 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="22c9667a-e00d-49e2-aa6d-da35dd213aa7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/d/1d784fce58c3719506730fb9749600554125b511" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/e/1e03a10e820bb1c2e32988395be9e145a8be81f4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/4/442292b8a7efeabbe4cc176709b833b1792140ec" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/1/d/1d784fce58c3719506730fb9749600554125b511" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/1/e/1e03a10e820bb1c2e32988395be9e145a8be81f4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/4/4/442292b8a7efeabbe4cc176709b833b1792140ec" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/multiform_validator/CnpjValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/multiform_validator/CnpjValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/multiform_validator/CpfValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/multiform_validator/CpfValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/multiform_validator/CreditCardValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/multiform_validator/CreditCardValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/multiform_validator/EmailValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/multiform_validator/EmailValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/multiform_validator/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/multiform_validator/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/multiform_validator/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/multiform_validator/Utils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/multiform_validator/Validator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/multiform_validator/Validator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/CnpjValidatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CnpjValidatorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/CpfValidatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CpfValidatorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/CreditCardValidatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CreditCardValidatorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/EmailValidatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/EmailValidatorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/UtilsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/UtilsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ValidatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ValidatorTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="22c9667a-e00d-49e2-aa6d-da35dd213aa7" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -61,33 +35,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Application.io.github.gabriel_logan.multiform_validator.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Application.io.github.multiform_validator.Main.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AsciiTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CnpjValidatorTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CpfValidatorTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CpfValidatorTest.testNullCpf.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CreditCardValidatorTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CreditCardValidatorTest.testIdentifyFlagCard.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.EmailValidatorTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.MainTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.SimpleMathTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.UtilsTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.ValidatorTest.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "Application.io.github.gabriel_logan.multiform_validator.Main.executor": "Run",
+    "Application.io.github.multiform_validator.Main.executor": "Run",
+    "JUnit.AsciiTest.executor": "Run",
+    "JUnit.CnpjValidatorTest.executor": "Run",
+    "JUnit.CpfValidatorTest.executor": "Run",
+    "JUnit.CpfValidatorTest.testNullCpf.executor": "Run",
+    "JUnit.CreditCardValidatorTest.executor": "Run",
+    "JUnit.CreditCardValidatorTest.testIdentifyFlagCard.executor": "Debug",
+    "JUnit.EmailValidatorTest.executor": "Run",
+    "JUnit.MainTest.executor": "Run",
+    "JUnit.SimpleMathTest.executor": "Run",
+    "JUnit.UtilsTest.executor": "Run",
+    "JUnit.ValidatorTest.executor": "Run",
+    "Maven.multiform-validator [test].executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="corretto-11" />
