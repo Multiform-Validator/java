@@ -17,3 +17,5 @@ P
  src/test/java/ValidatorTest.java,5\8\588b78f1e6cd56164975813197d21c04f270e038
 G
 multiform-validator.iml,d\5\d504f9b2cf453f919611cab68c0658cce3d4302e
+<
+settings.xml,1\d\1d784fce58c3719506730fb9749600554125b511
