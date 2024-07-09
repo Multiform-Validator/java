@@ -1,9 +1,0 @@
-
-
-java:S1104"TMake multiple a static final constant or non-public and provide accessors if needed.(“¥”ώÿÿÿÿ8ΆΏρν2J$b5524d68-7d69-4715-9215-ea5eac3b6a3d
-
-java:S1104"WMake cleanDomain a static final constant or non-public and provide accessors if needed.(γ°μζ8£Ώρν2J$06aefebf-77b8-4d0c-be96-0112b38147bb
-
-java:S1104"WMake repeatEmail a static final constant or non-public and provide accessors if needed.(Ξ¨•8£Ώρν2J$d75f94aa-21b7-4ea3-b995-286e4d3f1457
-
-java:S3776"RRefactor this method to reduce its Cognitive Complexity from 37 to the 15 allowed.(η‰±ωÿÿÿÿ8Αρν2J$2cc86b37-5265-4ece-b6b9-8efa63770667

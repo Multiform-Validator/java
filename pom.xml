@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>io.github.gabriel_logan</groupId>
-    <artifactId>multiform-validator</artifactId>
+    <groupId>io.github.multiform_validator</groupId>
+    <artifactId>java</artifactId>
     <version>0.0.1</version>
 
     <name>Multiform Validator</name>
@@ -13,11 +13,11 @@
         Multilingual library made for validation, various form fields, such as: email, cpf, cnpj, credit card and much
         more.
     </description>
-    <url>https://github.com/gabriel-logan/multiform-validator/tree/main/packages/java/</url>
+    <url>https://github.com/Multiform-Validator/java/</url>
     <licenses>
         <license>
             <name>Apache License 2.0</name>
-            <url>https://github.com/gabriel-logan/multiform-validator/blob/main/LICENSE</url>
+            <url>https://github.com/Multiform-Validator/java/blob/main/LICENSE</url>
         </license>
     </licenses>
     <developers>
@@ -75,7 +75,7 @@
         <repository>
             <id>github</id>
             <name>GitHub Packages</name>
-            <url>https://maven.pkg.github.com/gabriel-logan/multiform-validator</url>
+            <url>https://maven.pkg.github.com/multiform-validator/java</url>
         </repository>
     </distributionManagement>
 
