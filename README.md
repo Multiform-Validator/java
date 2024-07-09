@@ -21,14 +21,17 @@ import io.github.multiform_validator.CnpjValidator;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println(emailValidator.isEmail("foo@bar.com")); // true
-        System.out.println(emailValidator.isEmail("foo@bar")); // false
+        System.out.println(EmailValidator.isEmail("foo@bar.com")); // true
+        System.out.println(EmailValidator.isEmail("foo@bar")); // false
 
-        System.out.println(cpfValidator.cpfIsValid("123.456.789-09")); // true
-        System.out.println(cpfValidator.cpfIsValid("123.456.789-00")); // false
+        System.out.println(CpfValidator.cpfIsValid("123.456.789-09")); // true
+        System.out.println(CpfValidator.cpfIsValid("123.456.789-00")); // false
         
-        System.out.println(cnpjValidator.cnpjIsValid("12.345.678/0001-09")); // true
-        System.out.println(cnpjValidator.cnpjIsValid("12.345.678/0001-00")); // false
+        System.out.println(CnpjValidator.cnpjIsValid("12.345.678/0001-09")); // true
+        System.out.println(CnpjValidator.cnpjIsValid("12.345.678/0001-00")); // false
+
+        System.out.println(Validator.isAscii("foo")); // true
+        System.out.println(Validator.isAscii("foo©")); // false
     }
 }
 ```
