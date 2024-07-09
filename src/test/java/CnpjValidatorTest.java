@@ -1,6 +1,6 @@
 import org.junit.jupiter.api.Test;
 
-import static io.github.gabriel_logan.multiform_validator.CnpjValidator.cnpjIsValid;
+import static io.github.multiform_validator.CnpjValidator.cnpjIsValid;
 import static org.junit.jupiter.api.Assertions.*;
 
 class CnpjValidatorTest {

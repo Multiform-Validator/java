@@ -1,7 +1,7 @@
 import org.junit.jupiter.api.Test;
 
-import static io.github.gabriel_logan.multiform_validator.CreditCardValidator.identifyFlagCard;
-import static io.github.gabriel_logan.multiform_validator.CreditCardValidator.isCreditCardValid;
+import static io.github.multiform_validator.CreditCardValidator.identifyFlagCard;
+import static io.github.multiform_validator.CreditCardValidator.isCreditCardValid;
 import static org.junit.jupiter.api.Assertions.*;
 
 class CreditCardValidatorTest {
