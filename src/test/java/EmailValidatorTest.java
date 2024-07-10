@@ -6,71 +6,60 @@ import static org.junit.jupiter.api.Assertions.*;
 class EmailValidatorTest {
     @Test
     void testValidEmail() {
-        assertTrue(isEmail("test@example.com"));
-        assertTrue(isEmail("john.doe@example.com"));
+        assertTrue(isEmail("foo@bar.com"));
+        assertTrue(isEmail("Foo@Bar.com"));
+        assertTrue(isEmail("foo@bar.com.br"));
     }
 
     @Test
     void testInvalidEmail() {
-        assertFalse(isEmail("test@example"));
-        assertFalse(isEmail("john.doe@example"));
-        assertFalse(isEmail("test@example."));
-        assertFalse(isEmail("john.doe@example."));
-        assertFalse(isEmail("@example.com"));
-        assertFalse(isEmail("@example."));
-        assertFalse(isEmail("test@.com"));
-        assertFalse(isEmail("john.doe@.com"));
-        assertFalse(isEmail("test@."));
-        assertFalse(isEmail("john.doe@."));
-        assertFalse(isEmail("test@@example.com"));
-        assertFalse(isEmail("john.doe@@example.com"));
-        assertFalse(isEmail("test@example..com"));
-        assertFalse(isEmail("john.doe@example..com"));
-        assertFalse(isEmail("test@example.com."));
-        assertFalse(isEmail("john.doe@example.com."));
-        assertFalse(isEmail("test@example.."));
-        assertFalse(isEmail("john.doe@example.."));
-        assertFalse(isEmail("test@example.com.."));
-        assertFalse(isEmail("john.doe@example.com.."));
-        assertFalse(isEmail("test@example..com."));
-        assertFalse(isEmail("john.doe@example..com."));
-        assertFalse(isEmail("test@example.com.."));
-        assertFalse(isEmail("john.doe@example.com.."));
-        assertFalse(isEmail("test@example..com.."));
-        assertFalse(isEmail("john.doe@example..com.."));
-        assertFalse(isEmail("test@example.com..."));
-        assertFalse(isEmail("john.doe@example.com..."));
-        assertFalse(isEmail("test@example...com"));
-        assertFalse(isEmail("john.doe@example...com"));
-        assertFalse(isEmail("test@example.com..."));
-        assertFalse(isEmail("john.doe@example.com..."));
-        assertFalse(isEmail("test@example...com."));
-        assertFalse(isEmail("john.doe@example...com."));
-        assertFalse(isEmail("test@example.com..."));
-        assertFalse(isEmail("john.doe@example.com..."));
-        assertFalse(isEmail("test@example...com.."));
-        assertFalse(isEmail("john.doe@example...com.."));
-        assertFalse(isEmail("test@example.com...."));
-        assertFalse(isEmail("john.doe@example.com...."));
-        assertFalse(isEmail("test@example....com"));
-        assertFalse(isEmail("john.doe@example....com"));
-        assertFalse(isEmail("test@example.com...."));
-        assertFalse(isEmail("john.doe@example.com...."));
-        assertFalse(isEmail("test@example....com."));
-        assertFalse(isEmail("john.doe@example....com."));
-        assertFalse(isEmail("test@example.com...."));
-        assertFalse(isEmail("john.doe@example.com...."));
-        assertFalse(isEmail("test@example....com.."));
-        assertFalse(isEmail("john.doe@example....com.."));
-        assertFalse(isEmail("0654"));
-        assertFalse(isEmail("test"));
-        assertFalse(isEmail("john.doe"));
-        assertFalse(isEmail("test@"));
-        assertFalse(isEmail("john.doe@"));
-        assertFalse(isEmail("test@."));
-        assertFalse(isEmail("john.doe@."));
-        assertFalse(isEmail("test@.com"));
-        assertFalse(isEmail("john.doe@.com"));
+        assertFalse(isEmail("foo@bar"));
+        assertFalse(isEmail("1foo@bar.com"));
+        assertFalse(isEmail("foo@1bar.com"));
+        assertFalse(isEmail("foo@bar.1com"));
+        assertFalse(isEmail("foo.bar.com"));
+        assertFalse(isEmail("joaoaoao@gmail.com.com"));
+        assertFalse(isEmail("joao..@gmail.com"));
+        assertFalse(isEmail("joao.@gmail.com"));
+        assertFalse(isEmail("joao@@gmail.com"));
+        assertFalse(isEmail("joao@gmail..com"));
+        assertFalse(isEmail(".foo@bar.com"));
+        assertFalse(isEmail(",foo@bar.com"));
+        assertFalse(isEmail("!foo@bar.com"));
+        assertFalse(isEmail("@foo@bar.com"));
+        assertFalse(isEmail("#foo@bar.com"));
+        assertFalse(isEmail("$foo@bar.com"));
+        assertFalse(isEmail("foo@@bar.com"));
+        assertFalse(isEmail("foo@bar.com.br.br"));
+        assertFalse(isEmail("foo@bar.com.com.br.br"));
+        assertFalse(isEmail("foo@bar.com.com.br"));
+        assertFalse(isEmail("foo!@bar.com"));
+        assertFalse(isEmail("foo bar@baz.com"));
+        assertFalse(isEmail(" foo@bar.com"));
+        assertFalse(isEmail("foo@bar.com "));
+        assertFalse(isEmail("foo..bar@baz.com"));
+        assertFalse(isEmail("foo@@bar.com"));
+        assertFalse(isEmail("foo@bar..com"));
+        assertFalse(isEmail("foo..bar@baz.com"));
+        assertFalse(isEmail("foo@bar.com.."));
+        assertFalse(isEmail("foo@bar..com"));
+        assertFalse(isEmail("foo..@bar.com"));
+        assertFalse(isEmail("foo@bar..com."));
+        assertFalse(isEmail("foo..@bar..com."));
+        assertFalse(isEmail("foo@bar.com..."));
+        assertFalse(isEmail("foo@bar!com"));
+        assertFalse(isEmail("foo!@bar.com"));
+        assertFalse(isEmail("foo@bar.c"));
+        assertFalse(isEmail("foo@bar."));
+        assertFalse(isEmail("foo@bar"));
+        assertFalse(isEmail("foo@bar."));
+        assertFalse(isEmail("foo@bar.."));
+        assertFalse(isEmail("foo@bar..."));
+    }
+
+    @Test
+    void testEmptyEmail() {
+        assertFalse(isEmail(""));
     }
 
     @Test

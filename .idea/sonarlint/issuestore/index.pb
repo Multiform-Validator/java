@@ -21,3 +21,11 @@ S
 #.github/workflows/maven-publish.yml,8\5\85f48f2e34e9dcd0e1756f077d1409251f006845
 9
 	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
+f
+6src/main/java/io/github/multiform_validator/Utils.java,5\8\5879b52636e240d2cfcbd5e54543d3959f957811
+j
+:src/main/java/io/github/multiform_validator/Validator.java,5\a\5a503c465e2e403dbd4c3fe2906c7cecc8e13602
+n
+>src/main/java/io/github/multiform_validator/CnpjValidator.java,8\8\8821b29c537b8a99cd1bc3d5df88d632f6f5d314
+o
+?src/main/java/io/github/multiform_validator/EmailValidator.java,f\9\f9465a1df802c670887a6edc9706fd150e19342b

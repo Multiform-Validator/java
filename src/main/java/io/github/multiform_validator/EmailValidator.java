@@ -15,7 +15,7 @@ public class EmailValidator {
             throw new NullPointerException("Email cannot be null");
         }
 
-        final Pattern startsWithSpecialChar = Pattern.compile("^[^a-zA-Z0-9]");
+        final Pattern startsWithSpecialChar = Pattern.compile("^[^a-zA-Z]");
 
         if (startsWithSpecialChar.matcher(email).find()) {
             return false;

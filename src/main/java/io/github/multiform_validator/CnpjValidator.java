@@ -48,6 +48,11 @@ public class CnpjValidator {
             return false;
         }
 
+        // Check if all digits are the same
+        if (cnpjClean.chars().distinct().count() <= 1) {
+            return false;
+        }
+
         // Convert the string to an array of integers
         final int[] cnpjArray = cnpjClean.chars().map(Character::getNumericValue).toArray();
 

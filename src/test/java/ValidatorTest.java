@@ -25,6 +25,8 @@ class ValidatorTest {
         assertTrue(Validator.isCEP("12345678"));
         assertFalse(Validator.isCEP("1234567890"));
         assertFalse(Validator.isCEP("abcdefgh"));
+        assertFalse(Validator.isCEP("1234567"));
+        assertTrue(Validator.isCEP("12345-678"));
     }
 
     @Test
@@ -71,12 +73,14 @@ class ValidatorTest {
     void testIsPortInt() {
         assertTrue(Validator.isPort(80));
         assertFalse(Validator.isPort(-1));
+        assertFalse(Validator.isPort(65536));
     }
 
     @Test
     void testIsPortString() {
         assertTrue(Validator.isPort("80"));
         assertFalse(Validator.isPort("-1"));
+        assertFalse(Validator.isPort("65536"));
         assertThrows(IllegalArgumentException.class, () -> Validator.isPort(null));
         assertThrows(IllegalArgumentException.class, () -> Validator.isPort(""));
     }
@@ -85,6 +89,7 @@ class ValidatorTest {
     void testIsPostalCode() {
         assertTrue(Validator.isPostalCode("12345"));
         assertFalse(Validator.isPostalCode("Hello World"));
+        assertFalse(Validator.isPostalCode("123456"));
         assertThrows(IllegalArgumentException.class, () -> Validator.isPostalCode(null));
         assertThrows(IllegalArgumentException.class, () -> Validator.isPostalCode(""));
     }

@@ -5,11 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="22c9667a-e00d-49e2-aa6d-da35dd213aa7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/d/1d784fce58c3719506730fb9749600554125b511" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/8/5879b52636e240d2cfcbd5e54543d3959f957811" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/a/5a503c465e2e403dbd4c3fe2906c7cecc8e13602" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/8/8821b29c537b8a99cd1bc3d5df88d632f6f5d314" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/5/8/5879b52636e240d2cfcbd5e54543d3959f957811" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/5/a/5a503c465e2e403dbd4c3fe2906c7cecc8e13602" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/8/8/8821b29c537b8a99cd1bc3d5df88d632f6f5d314" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/c/dcba94fd99e9396082d1fedd3522764f78825365" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/c/dcba94fd99e9396082d1fedd3522764f78825365" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/1/d/1d784fce58c3719506730fb9749600554125b511" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/multiform-validator.iml" beforeDir="false" afterPath="$PROJECT_DIR$/multiform-validator.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/multiform_validator/CnpjValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/multiform_validator/CnpjValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/multiform_validator/EmailValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/multiform_validator/EmailValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/multiform_validator/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/multiform_validator/Utils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/CnpjValidatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CnpjValidatorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/CpfValidatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CpfValidatorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/EmailValidatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/EmailValidatorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/UtilsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/UtilsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ValidatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ValidatorTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +85,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="corretto-11" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />

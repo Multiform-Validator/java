@@ -37,4 +37,28 @@ class CnpjValidatorTest {
         assertFalse(cnpjIsValid("12.345.678/0001-900"));
         assertFalse(cnpjIsValid("123456780001900"));
     }
+
+    @Test
+    void testInvalidCnpjWithLetters() {
+        assertFalse(cnpjIsValid("12.345.678/0001-9A"));
+        assertFalse(cnpjIsValid("1234567800019A"));
+    }
+
+    @Test
+    void testInvalidCnpjWithSpecialCharacters() {
+        assertFalse(cnpjIsValid("12.345.678/0001-9@"));
+        assertFalse(cnpjIsValid("1234567800019@"));
+    }
+
+    @Test
+    void testInvalidCnpjWithSpaces() {
+        assertFalse(cnpjIsValid("12.345.678/0001-9 "));
+        assertFalse(cnpjIsValid("1234567800019 "));
+    }
+
+    @Test
+    void testAllDigitsAreEqual() {
+        assertFalse(cnpjIsValid("00.000.000/0000-00"));
+        assertFalse(cnpjIsValid("00000000000000"));
+    }
 }

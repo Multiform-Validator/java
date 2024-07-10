@@ -8,26 +8,26 @@ public class Utils {
         throw new IllegalStateException("Utility class");
     }
 
-    private static final List<String> CleanAfterDefaultDomain = Arrays.asList(
+    private static final List<String> GetOnlyEmailCleanAfterDefaultDomain = Arrays.asList(
             ".br", ".io", ".pt", ".us", ".org", ".com"
     );
 
-    public static class OptionsParams {
+    public static class GetOnlyEmailOptionsParams {
         public Boolean multiple = false;
         public Object cleanDomain = false;
         public Boolean repeatEmail = false;
     }
 
-    private static final OptionsParams defaultOptionsParams = new OptionsParams();
+    private static final GetOnlyEmailOptionsParams getOnlyEmailDefaultOptionsParams = new GetOnlyEmailOptionsParams();
 
-    public static Object getOnlyEmail(String text, OptionsParams options) {
+    public static Object getOnlyEmail(String text, GetOnlyEmailOptionsParams options) {
         if (options == null) {
-            options = defaultOptionsParams;
+            options = getOnlyEmailDefaultOptionsParams;
         }
 
-        Boolean multiple = options.multiple != null ? options.multiple : defaultOptionsParams.multiple;
-        Object cleanDomain = options.cleanDomain != null ? options.cleanDomain : defaultOptionsParams.cleanDomain;
-        Boolean repeatEmail = options.repeatEmail != null ? options.repeatEmail : defaultOptionsParams.repeatEmail;
+        Boolean multiple = options.multiple != null ? options.multiple : getOnlyEmailDefaultOptionsParams.multiple;
+        Object cleanDomain = options.cleanDomain != null ? options.cleanDomain : getOnlyEmailDefaultOptionsParams.cleanDomain;
+        Boolean repeatEmail = options.repeatEmail != null ? options.repeatEmail : getOnlyEmailDefaultOptionsParams.repeatEmail;
 
         Pattern emailPattern = Pattern.compile("[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}");
         Matcher matcher = emailPattern.matcher(text);
@@ -42,7 +42,7 @@ public class Utils {
         }
 
         if (cleanDomain != null && !cleanDomain.equals(false)) {
-            List<String> domainsToClean = cleanDomain instanceof List ? (List<String>) cleanDomain : CleanAfterDefaultDomain;
+            List<String> domainsToClean = cleanDomain instanceof List ? (List<String>) cleanDomain : GetOnlyEmailCleanAfterDefaultDomain;
 
             List<String> cleanedEmails = new ArrayList<>();
             for (String email : matches) {

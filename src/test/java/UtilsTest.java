@@ -17,34 +17,30 @@ class UtilsTest {
         assertEquals("test@example.com", Utils.getOnlyEmail("This is a sample text with email test@example.com", null));
 
         // Test with multiple emails
-        Utils.OptionsParams options1 = new Utils.OptionsParams();
+        Utils.GetOnlyEmailOptionsParams options1 = new Utils.GetOnlyEmailOptionsParams();
         options1.multiple = true;
         assertEquals(
                 new ArrayList<>(Arrays.asList("test1@example.com", "test2@example.com")),
                 Utils.getOnlyEmail("This is a sample text with emails test1@example.com and test2@example.com", options1)
         );
 
-        // Test with cleaning domain
-        Utils.OptionsParams options = new Utils.OptionsParams();
-        options.cleanDomain = true;
-        assertEquals("test@example.com.br", Utils.getOnlyEmail("test@example.com.br", options));
-
-        // Test with cleaning domain and multiple emails
-        options.multiple = true;
+        // Test with multiple emails and clean domain
+        Utils.GetOnlyEmailOptionsParams options2 = new Utils.GetOnlyEmailOptionsParams();
+        options2.multiple = true;
+        options2.cleanDomain = true;
         assertEquals(
-                new ArrayList<>(Arrays.asList("test1@example.com.br", "test2@example.com.br")),
-                Utils.getOnlyEmail("test1@example.com.br and test2@example.com.br", options)
+                new ArrayList<>(Arrays.asList("test1@example.com", "test2@example.com")),
+                Utils.getOnlyEmail("This is a sample text with emails test1@example.comAWODI test2@example.comAWDOI awwdawd", options2)
         );
 
-        // Test with repeatEmail set to false
-        options.repeatEmail = false;
-        assertEquals(Collections.singletonList("test@example.com"), Utils.getOnlyEmail("test@example.com and test@example.com", options));
-
-        // Test with repeatEmail set to false and multiple emails
-        options.multiple = true;
+        // Test with multiple emails and clean domain and repeat email
+        Utils.GetOnlyEmailOptionsParams options3 = new Utils.GetOnlyEmailOptionsParams();
+        options3.multiple = true;
+        options3.cleanDomain = true;
+        options3.repeatEmail = true;
         assertEquals(
-                new ArrayList<>(Collections.singletonList("test@example.com")),
-                Utils.getOnlyEmail("test@example.com and test@example.com", options)
+                new ArrayList<>(Arrays.asList("test1@example.com", "test1@example.com", "test2@example.com")),
+                Utils.getOnlyEmail("This is a sample text with emails test1@example.comASD test1@example.comASD blabla test2@example.com", options3)
         );
     }
 }

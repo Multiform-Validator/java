@@ -37,4 +37,34 @@ class CpfValidatorTest {
         assertFalse(cpfIsValid("1234567890"));
         assertFalse(cpfIsValid("111444777350"));
     }
+
+    @Test
+    void testInvalidCpfWithLetters() {
+        assertFalse(cpfIsValid("1234567890A"));
+        assertFalse(cpfIsValid("1114447773A"));
+    }
+
+    @Test
+    void testInvalidCpfWithSpecialCharacters() {
+        assertFalse(cpfIsValid("1234567890@"));
+        assertFalse(cpfIsValid("1114447773@"));
+    }
+
+    @Test
+    void testInvalidCpfWithSpaces() {
+        assertFalse(cpfIsValid("1234567890 "));
+        assertFalse(cpfIsValid("1114447773 "));
+    }
+
+    @Test
+    void testAllDigitsAreEqual() {
+        assertFalse(cpfIsValid("00000000000"));
+        assertFalse(cpfIsValid("11111111111"));
+    }
+
+    @Test
+    void testInvalidCpfWithSpecialCharactersAndLetters() {
+        assertFalse(cpfIsValid("1234567890@"));
+        assertFalse(cpfIsValid("1114447773A"));
+    }
 }
