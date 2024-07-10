@@ -9,11 +9,7 @@
 
 follow the steps below to use the library in your project.
 
-https://jitpack.io/#multiform-validator/java/0.0.1
-
-or
-
-https://github.com/Multiform-Validator/java/packages/2199761
+https://jitpack.io/#multiform-validator/java/
 
 ## Example of how to use
 
