@@ -6,11 +6,10 @@ name: Maven Package
 on:
   release:
     types: [created]
-    
-  workflow_dispatch:
 
 jobs:
   build:
+
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -18,58 +17,18 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    
     - name: Set up JDK 8
       uses: actions/setup-java@v3
       with:
         java-version: '8'
         distribution: 'temurin'
-        server-id: github
-        settings-path: ${{ github.workspace }}
-
-    - name: Create settings.xml
-      run: |
-        echo '<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
-                            http://maven.apache.org/xsd/settings-1.0.0.xsd">
-
-        <activeProfiles>
-          <activeProfile>github</activeProfile>
-        </activeProfiles>
-
-        <profiles>
-          <profile>
-            <id>github</id>
-            <repositories>
-              <repository>
-                <id>central</id>
-                <url>https://repo1.maven.org/maven2</url>
-              </repository>
-              <repository>
-                <id>github</id>
-                <url>https://maven.pkg.github.com/multiform-validator/java</url>
-                <snapshots>
-                  <enabled>true</enabled>
-                </snapshots>
-              </repository>
-            </repositories>
-          </profile>
-        </profiles>
-
-        <servers>
-          <server>
-            <id>github</id>
-            <username>gabriel-logan</username>
-            <password>${{secrets.MULTIFORM_VALIDATOR_MVN_TOKEN_GITHUB_PACKAGES}}</password>
-          </server>
-        </servers>
-        </settings>' > settings.xml
+        server-id: github # Value of the distributionManagement/repository/id field of the pom.xml
+        settings-path: ${{ github.workspace }} # location for the settings.xml file
 
     - name: Build with Maven
       run: mvn -B package --file pom.xml
 
     - name: Publish to GitHub Packages Apache Maven
-      run: mvn deploy -s settings.xml
+      run: mvn deploy -s $GITHUB_WORKSPACE/settings.xml
       env:
         GITHUB_TOKEN: ${{ github.token }}
