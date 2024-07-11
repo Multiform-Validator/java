@@ -63,14 +63,14 @@ public class Main {
 
 ### CpfValidator
 ```java
-import io.github.multiform_validator.CpfValidator;
+import static io.github.multiform_validator.CpfValidator.cpfIsValid;
 
 public class Main {
     public static void main(String[] args) {
         String cpfTrue = "123.456.789-09";
         String cpfFalse = "123.456.789-10";
-        System.out.println(CpfValidator.cpfIsValid(cpfTrue)); // true
-        System.out.println(CpfValidator.cpfIsValid(cpfFalse)); // false
+        System.out.println(cpfIsValid(cpfTrue)); // true
+        System.out.println(cpfIsValid(cpfFalse)); // false
     }
 }
 ```
