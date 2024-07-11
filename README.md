@@ -140,6 +140,8 @@ public class Main {
     }
 
     public static void validateEmailExample() {
+        // IMPORTANT: validDomains can not be used with validDomainsList, you can use only one of them
+
         // Basic email validation
         boolean isValid = Validate.validateEmail("example@example.com");
         System.out.println("Is valid: " + isValid); // Expected: true
