@@ -19,7 +19,7 @@ https://jitpack.io/#multiform-validator/java/
 - CpfValidator
   - cpfIsValid
 
-CreditCardValidator
+- CreditCardValidator
   - isCreditCardValid
   - identifyCreditCard
 
