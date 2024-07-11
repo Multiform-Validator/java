@@ -1,12 +1,21 @@
 package io.github.multiform_validator;
 
 public class CreditCardValidator {
+    // Message constants
     private static final String INPUT_VALUE_CANNOT_BE_EMPTY = "Input value cannot be empty.";
 
+    // Prevent instantiation
     private CreditCardValidator() {
         throw new IllegalStateException("Utility class");
     }
 
+    /**
+     * Validates a credit card number.
+     *
+     * @param creditCard The credit card number to validate.
+     * @return true if the credit card number is valid, false otherwise.
+     * @throws IllegalArgumentException if the input value is null or empty.
+     */
     public static boolean isCreditCardValid(String creditCard) {
         if (creditCard == null || creditCard.isEmpty()) {
             throw new IllegalArgumentException(INPUT_VALUE_CANNOT_BE_EMPTY);
@@ -39,6 +48,13 @@ public class CreditCardValidator {
         return sum % 10 == 0;
     }
 
+    /**
+     * Identifies the flag of a credit card based on its number.
+     *
+     * @param cardNumber The credit card number.
+     * @return The flag of the credit card, or "Unknown" if the flag is not recognized.
+     * @throws IllegalArgumentException if the input value is null or empty.
+     */
     public static String identifyFlagCard(String cardNumber) {
         if (cardNumber == null || cardNumber.isEmpty()) {
             throw new IllegalArgumentException("The input should be a string.");

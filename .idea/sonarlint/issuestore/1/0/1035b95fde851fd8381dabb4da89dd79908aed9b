@@ -1,11 +1,11 @@
 
 ˜
-java:S1104"UMake maxLength a static final constant or non-public and provide accessors if needed.(Ö­™è8¯‡¼ŽŠ2J$69ffa59d-85eb-4a6f-9030-3646be07cee3
+java:S1104#"UMake maxLength a static final constant or non-public and provide accessors if needed.(Ö­™è8à˜ò“Š2J$27ac01a5-96ab-4818-a760-026487bb9b40
 –
-java:S1104"SMake country a static final constant or non-public and provide accessors if needed.(­ŽžÇ8°‡¼ŽŠ2J$3d5c5596-6f11-4ae0-8417-1606525c3e4f
+java:S1104$"SMake country a static final constant or non-public and provide accessors if needed.(­ŽžÇ8á˜ò“Š2J$3fb1893c-13d9-4d09-90c5-a0c869f746d3
  
-java:S1104"XMake validDomains a static final constant or non-public and provide accessors if needed.(ÄÆ™‹úÿÿÿÿ8°‡¼ŽŠ2J$a47b5469-06bf-465a-b0ac-d082772b79be
+java:S1104%"XMake validDomains a static final constant or non-public and provide accessors if needed.(ÄÆ™‹úÿÿÿÿ8á˜ò“Š2J$05cf2b67-0674-493d-bd03-5b29e0e813fa
 Ÿ
-java:S1104"\Make validDomainsList a static final constant or non-public and provide accessors if needed.(ðÎð™8°‡¼ŽŠ2J$628d8dd1-67bb-4135-94f1-c0a275fc3a2c
+java:S1104&"\Make validDomainsList a static final constant or non-public and provide accessors if needed.(ðÎð™8á˜ò“Š2J$cb37d11e-220f-4a94-bb35-25b03b5273b8
 š
-java:S3776("RRefactor this method to reduce its Cognitive Complexity from 18 to the 15 allowed.(–åÕ²þÿÿÿÿ8ãˆ¼ŽŠ2J$1089fae5-7a72-4ed0-beda-4736a8310b12
+java:S3776?"RRefactor this method to reduce its Cognitive Complexity from 18 to the 15 allowed.(–åÕ²þÿÿÿÿ8é™ò“Š2J$a80b18b5-e2ba-445d-a20e-b5782b176304

@@ -4,14 +4,25 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.IntStream;
 
+/**
+ * The CpfValidator class provides a utility method to validate CPF (Cadastro de Pessoas Físicas) numbers.
+ */
 public class CpfValidator {
+    // Prevent instantiation
     private CpfValidator() {
         throw new IllegalStateException("Utility class");
     }
 
+    /**
+     * Validates a CPF number.
+     *
+     * @param cpf the CPF number to validate
+     * @return true if the CPF number is valid, false otherwise
+     * @throws NullPointerException if the CPF number is null
+     */
     public static boolean cpfIsValid(String cpf) {
         if (cpf == null) {
-            throw new NullPointerException("CPF cannot be null or empty");
+            throw new NullPointerException("CPF cannot be null");
         }
 
         final String cpfClean = cpf.replaceAll("\\D", "");

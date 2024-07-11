@@ -3,10 +3,17 @@ package io.github.multiform_validator;
 import java.util.Arrays;
 
 public class CnpjValidator {
+    // Prevent instantiation
     private CnpjValidator() {
         throw new IllegalStateException("Utility class");
     }
 
+    /**
+     * Calculate the first verifier digit of a CNPJ
+     *
+     * @param cnpjBase an array of integers with the first 12 digits of a CNPJ
+     * @return the first verifier digit
+     */
     private static int calculateFirstVerifier(int[] cnpjBase) {
         final int[] weight = {5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2};
         int sum = 0;
@@ -19,6 +26,13 @@ public class CnpjValidator {
         return remainder < 2 ? 0 : 11 - remainder;
     }
 
+    /**
+     * Calculate the second verifier digit of a CNPJ
+     *
+     * @param cnpjBase an array of integers with the first 12 digits of a CNPJ
+     * @param firstVerifier the first verifier digit
+     * @return the second verifier digit
+     */
     private static int calculateSecondVerifier(int[] cnpjBase, int firstVerifier) {
         final int[] weight = {6, 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2};
         int sum = 0;
@@ -33,9 +47,16 @@ public class CnpjValidator {
         return remainder < 2 ? 0 : 11 - remainder;
     }
 
+    /**
+     * Check if a CNPJ is valid
+     *
+     * @param cnpj the CNPJ to be validated
+     * @return true if the CNPJ is valid, false otherwise
+     * @throws NullPointerException if the CNPJ is null
+     */
     public static boolean cnpjIsValid(String cnpj) {
         if (cnpj == null) {
-            throw new NullPointerException("CNPJ cannot be null or empty");
+            throw new NullPointerException("CNPJ cannot be null");
         }
 
         final String cnpjClean = cnpj.replaceAll("\\D", "");

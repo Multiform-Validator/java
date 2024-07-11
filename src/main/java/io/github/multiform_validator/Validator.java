@@ -12,6 +12,13 @@ public class Validator {
         throw new IllegalStateException("Utility class");
     }
 
+    /**
+     * Checks if the given string contains only ASCII characters.
+     *
+     * @param value the string to be checked
+     * @return true if the string contains only ASCII characters, false otherwise
+     * @throws IllegalArgumentException if the input value is null or empty
+     */
     public static boolean isAscii(String value) {
         if (value == null || value.isEmpty()) {
             throw new IllegalArgumentException(INPUT_VALUE_CANNOT_BE_EMPTY);
@@ -20,6 +27,13 @@ public class Validator {
         return value.chars().allMatch(c -> c < 128);
     }
 
+    /**
+     * Checks if the given string is a valid Base64 encoded string.
+     *
+     * @param value the string to be checked
+     * @return true if the string is a valid Base64 encoded string, false otherwise
+     * @throws IllegalArgumentException if the input value is null or empty
+     */
     public static boolean isBase64(String value) {
         if (value == null || value.isEmpty()) {
             throw new IllegalArgumentException(INPUT_VALUE_CANNOT_BE_EMPTY);
@@ -28,6 +42,12 @@ public class Validator {
         return value.matches("^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)?$");
     }
 
+    /**
+     * Checks if the given string is a valid CEP (Brazilian postal code).
+     *
+     * @param cep the string to be checked
+     * @return true if the string is a valid CEP, false otherwise
+     */
     public static boolean isCEP(String cep) {
         if (cep.length() < 8 || cep.length() > 10) {
             return false;
@@ -48,6 +68,13 @@ public class Validator {
         return true;
     }
 
+    /**
+     * Checks if the given string is a valid date in the format "yyyy-MM-dd".
+     *
+     * @param date the string to be checked
+     * @return true if the string is a valid date, false otherwise
+     * @throws IllegalArgumentException if the input value is null or empty
+     */
     public static boolean isDate(String date) {
         if (date == null || date.isEmpty()) {
             throw new IllegalArgumentException(INPUT_VALUE_CANNOT_BE_EMPTY);
@@ -56,7 +83,13 @@ public class Validator {
         return date.matches("^\\d{4}-\\d{2}-\\d{2}$");
     }
 
-
+    /**
+     * Checks if the given string is a valid decimal number.
+     *
+     * @param value the string to be checked
+     * @return true if the string is a valid decimal number, false otherwise
+     * @throws IllegalArgumentException if the input value is null or empty
+     */
     public static boolean isDecimal(String value) {
         if (value == null || value.isEmpty()) {
             throw new IllegalArgumentException(INPUT_VALUE_CANNOT_BE_EMPTY);
@@ -71,6 +104,13 @@ public class Validator {
         }
     }
 
+    /**
+     * Checks if the given string is a valid email address.
+     *
+     * @param email the string to be checked
+     * @return true if the string is a valid email address, false otherwise
+     * @throws NullPointerException if the email is null
+     */
     public static boolean isEmail(String email) {
         if (email == null) {
             throw new NullPointerException("Email cannot be null");
@@ -129,6 +169,13 @@ public class Validator {
         return domainParts.length == uniqueDomainParts.size();
     }
 
+    /**
+     * Checks if the given string is a valid MAC address.
+     *
+     * @param macAddress the string to be checked
+     * @return true if the string is a valid MAC address, false otherwise
+     * @throws IllegalArgumentException if the input value is null or empty
+     */
     public static boolean isMACAddress(String macAddress) {
         if (macAddress == null || macAddress.isEmpty()) {
             throw new IllegalArgumentException(INPUT_VALUE_CANNOT_BE_EMPTY);
@@ -137,6 +184,13 @@ public class Validator {
         return macAddress.matches("^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})$");
     }
 
+    /**
+     * Checks if the given string is a valid MD5 hash.
+     *
+     * @param value the string to be checked
+     * @return true if the string is a valid MD5 hash, false otherwise
+     * @throws IllegalArgumentException if the input value is null or empty
+     */
     public static boolean isMD5(String value) {
         if (value == null || value.isEmpty()) {
             throw new IllegalArgumentException(INPUT_VALUE_CANNOT_BE_EMPTY);
@@ -145,6 +199,13 @@ public class Validator {
         return value.matches("^[a-fA-F0-9]{32}$");
     }
 
+    /**
+     * Checks if the given string is a valid number.
+     *
+     * @param value the string to be checked
+     * @return true if the string is a valid number, false otherwise
+     * @throws IllegalArgumentException if the input value is null or empty
+     */
     public static boolean isNumber(String value) {
         if (value == null || value.isEmpty()) {
             throw new IllegalArgumentException(INPUT_VALUE_CANNOT_BE_EMPTY);
@@ -153,10 +214,23 @@ public class Validator {
         return value.matches("^-?\\d+$");
     }
 
+    /**
+     * Checks if the given port number is valid.
+     *
+     * @param port the port number to be checked
+     * @return true if the port number is valid, false otherwise
+     */
     public static boolean isPort(int port) {
         return port >= 0 && port <= 65535;
     }
 
+    /**
+     * Checks if the given string is a valid port number.
+     *
+     * @param port the string to be checked
+     * @return true if the string is a valid port number, false otherwise
+     * @throws IllegalArgumentException if the input value is null or empty
+     */
     public static boolean isPort(String port) {
         if (port == null || port.isEmpty()) {
             throw new IllegalArgumentException(INPUT_VALUE_CANNOT_BE_EMPTY);
@@ -170,6 +244,13 @@ public class Validator {
         }
     }
 
+    /**
+     * Checks if the given string is a valid postal code.
+     *
+     * @param postalCode the string to be checked
+     * @return true if the string is a valid postal code, false otherwise
+     * @throws IllegalArgumentException if the input value is null or empty
+     */
     public static boolean isPostalCode(String postalCode) {
         if (postalCode == null || postalCode.isEmpty()) {
             throw new IllegalArgumentException("Input value must be a string.");
@@ -204,6 +285,13 @@ public class Validator {
                 postalCode.matches(usZipCodeOnlyRegex);
     }
 
+    /**
+     * Checks if the given string is a valid time in the format "HH:mm:ss" or "HH:mm:ss a".
+     *
+     * @param time the string to be checked
+     * @return true if the string is a valid time, false otherwise
+     * @throws IllegalArgumentException if the input value is null or empty
+     */
     public static boolean isTime(String time) {
         if (time == null || time.isEmpty()) {
             throw new IllegalArgumentException(INPUT_VALUE_CANNOT_BE_EMPTY);

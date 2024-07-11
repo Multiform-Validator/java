@@ -4,6 +4,7 @@ import java.util.*;
 import java.util.regex.*;
 
 public class Utils {
+    // Prevent instantiation
     private Utils() {
         throw new IllegalStateException("Utility class");
     }
@@ -12,6 +13,9 @@ public class Utils {
             ".br", ".io", ".pt", ".us", ".org", ".com"
     );
 
+    /**
+     * Options for the getOnlyEmail method.
+     */
     public static class GetOnlyEmailOptionsParams {
         public Boolean multiple = false;
         public Object cleanDomain = false;
@@ -20,6 +24,13 @@ public class Utils {
 
     private static final GetOnlyEmailOptionsParams getOnlyEmailDefaultOptionsParams = new GetOnlyEmailOptionsParams();
 
+    /**
+     * Extracts email addresses from the given text.
+     *
+     * @param text    The text to extract email addresses from.
+     * @param options The options for extracting email addresses.
+     * @return The extracted email addresses.
+     */
     public static Object getOnlyEmail(String text, GetOnlyEmailOptionsParams options) {
         if (options == null) {
             options = getOnlyEmailDefaultOptionsParams;

@@ -9,8 +9,6 @@ S
 #src/test/java/CpfValidatorTest.java,a\2\a24cbfdd637f97863307ade4186f822da9323b35
 Z
 *src/test/java/CreditCardValidatorTest.java,7\8\781044df9ef6036c30c5c3cc90828fc3b4e48b38
-U
-%src/test/java/EmailValidatorTest.java,d\c\dcba94fd99e9396082d1fedd3522764f78825365
 L
 src/test/java/UtilsTest.java,f\0\f0eda9716108ef7652317efaaa6fb8ca673ce81f
 P
@@ -27,8 +25,6 @@ j
 :src/main/java/io/github/multiform_validator/Validator.java,5\a\5a503c465e2e403dbd4c3fe2906c7cecc8e13602
 n
 >src/main/java/io/github/multiform_validator/CnpjValidator.java,8\8\8821b29c537b8a99cd1bc3d5df88d632f6f5d314
-o
-?src/main/java/io/github/multiform_validator/EmailValidator.java,f\9\f9465a1df802c670887a6edc9706fd150e19342b
 i
 9src/main/java/io/github/multiform_validator/Validate.java,1\0\1035b95fde851fd8381dabb4da89dd79908aed9b
 O
@@ -37,3 +33,5 @@ t
 Dsrc/main/java/io/github/multiform_validator/CreditCardValidator.java,b\4\b472df26aece629bb77df8ebac5827b71ed0a735
 S
 #.github/workflows/java-pr-check.yml,6\d\6d7e0794b4bcc592eaba286aa7557da83ba765a5
+m
+=src/main/java/io/github/multiform_validator/CpfValidator.java,b\4\b4a2aa78fccd481c2a54c1b1f301c1651829b98c

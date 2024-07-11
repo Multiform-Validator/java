@@ -6,10 +6,14 @@ import java.util.regex.*;
 import static io.github.multiform_validator.Validator.isEmail;
 
 public class Validate {
+    // Prevent instantiation
     private Validate() {
         throw new IllegalStateException("Utility class");
     }
-
+    
+    /**
+     * The default list of valid email domains.
+     */
     private static final List<String> validateEmailValidDomainsDefault = Arrays.asList(
             "@gmail.com",
             "@outlook.com",
@@ -24,6 +28,9 @@ public class Validate {
             "@protonmail.ch"
     );
 
+    /**
+     * The ValidateEmailOptionsParams class represents the options for email validation.
+     */
     public static class ValidateEmailOptionsParams {
         public int maxLength = 400;
         public String country = "";
@@ -31,12 +38,28 @@ public class Validate {
         public List<String> validDomainsList = new ArrayList<>();
     }
 
+    // Default options for email validation
     private static final ValidateEmailOptionsParams validateEmailDefaultOptionsParams = new ValidateEmailOptionsParams();
 
-    // Overloaded methods
+    /**
+     * Validates an email address using the default options.
+     *
+     * @param email The email address to validate.
+     * @return true if the email address is valid, false otherwise.
+     * @throws IllegalArgumentException if the input value is empty.
+     */
     public static boolean validateEmail(String email) {
         return validateEmail(email, null);
     }
+
+    /**
+     * Validates an email address using the specified options.
+     *
+     * @param email The email address to validate.
+     * @param options The options for email validation.
+     * @return true if the email address is valid, false otherwise.
+     * @throws IllegalArgumentException if the input value is empty or if both validDomains and validDomainsList are used at the same time.
+     */
     public static boolean validateEmail(String email, ValidateEmailOptionsParams options) {
         if (options == null) {
             options = validateEmailDefaultOptionsParams;
