@@ -35,3 +35,5 @@ O
 src/test/java/ValidateTest.java,c\7\c72d3c1c5a04f95a684f8e7a7c738010c95a16e8
 t
 Dsrc/main/java/io/github/multiform_validator/CreditCardValidator.java,b\4\b472df26aece629bb77df8ebac5827b71ed0a735
+S
+#.github/workflows/java-pr-check.yml,6\d\6d7e0794b4bcc592eaba286aa7557da83ba765a5
