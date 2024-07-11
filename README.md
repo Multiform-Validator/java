@@ -128,6 +128,51 @@ public class Main {
 }
 ```
 
+### Validate
+
+```java
+import io.github.multiform_validator.Validate;
+import io.github.multiform_validator.Validate.ValidateEmailOptionsParams;
+
+public class Main {
+    public static void main(String[] args) {
+        validateEmailExample();
+    }
+
+    public static void validateEmailExample() {
+        // Basic email validation
+        boolean isValid = Validate.validateEmail("example@example.com");
+        System.out.println("Is valid: " + isValid); // Expected: true
+
+        // Email validation with options: maxLength
+        ValidateEmailOptionsParams optionsMaxLength = new ValidateEmailOptionsParams();
+        optionsMaxLength.maxLength = 10; // Setting max length to 10, which should fail for longer emails
+        boolean isValidMaxLength = Validate.validateEmail("longemail@example.com", optionsMaxLength);
+        System.out.println("Is valid with maxLength: " + isValidMaxLength); // Expected: false
+
+        // Email validation with options: country specific
+        ValidateEmailOptionsParams optionsCountry = new ValidateEmailOptionsParams();
+        optionsCountry.country = "us"; // Expecting an email from the US
+        boolean isNotValidCountry = Validate.validateEmail("example@domain.com", optionsCountry);
+        boolean isValidCountry = Validate.validateEmail("example@domain.com.us", optionsCountry);
+        System.out.println("Is not valid with country: " + isNotValidCountry); // Expected: false
+        System.out.println("Is valid with country: " + isValidCountry); // Expected: true
+
+        // Email validation with options: validDomains
+        ValidateEmailOptionsParams optionsValidDomains = new ValidateEmailOptionsParams();
+        optionsValidDomains.validDomains = true; // Only allow certain domains (implementation specific)
+        boolean isValidValidDomains = Validate.validateEmail("example@gmail.com", optionsValidDomains);
+        System.out.println("Is valid with validDomains: " + isValidValidDomains); // Expected: true
+
+        // Email validation with options: validDomainsList
+        ValidateEmailOptionsParams optionsValidDomainsList = new ValidateEmailOptionsParams();
+        optionsValidDomainsList.validDomainsList.add("specificdomain.com"); // Adding a specific domain to the list
+        boolean isValidValidDomainsList = Validate.validateEmail("example@specificdomain.com", optionsValidDomainsList);
+        System.out.println("Is valid with validDomainsList: " + isValidValidDomainsList); // Expected: true
+    }
+}
+```
+
 ### Validator
 
 ```java
