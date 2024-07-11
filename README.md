@@ -11,35 +11,145 @@ follow the steps below to use the library in your project.
 
 https://jitpack.io/#multiform-validator/java/
 
-## Example of how to use
+## Available methods - JAVA (0.0.2)v
 
+- CnpjValidator
+  - cnpjIsValid
+
+- CpfValidator
+  - cpfIsValid
+
+CreditCardValidator
+  - isCreditCardValid
+  - identifyCreditCard
+
+- EmailValidator
+  - isEmail
+
+- Utils
+  - getOnlyEmail
+    - getOnlyEmailWithOptions (options)
+      - multiple (boolean) - default: false
+      - cleanDomain (boolean) - default: false
+      - repeatEmail (boolean) - default: false
+
+- Validator
+  - isAscii
+  - isCEP
+  - isDate
+  - isDecimal
+  - isMACAddress
+  - isNumber
+  - isPort
+  - isPostalCode
+  - isTime
+
+
+## How to use
+
+### CnpjValidator
 ```java
-import io.github.multiform_validator.Validator;
-import io.github.multiform_validator.EmailValidator;
-import io.github.multiform_validator.CpfValidator;
 import io.github.multiform_validator.CnpjValidator;
+
+public class Main {
+    public static void main(String[] args) {
+        String cnpjTrue = "69.807.668/0001-41";
+        String cnpjFalse = "61.807.661/0001-48";
+        System.out.println(CnpjValidator.cnpjIsValid(cnpjTrue)); // true
+        System.out.println(CnpjValidator.cnpjIsValid(cnpjFalse)); // false
+    }
+}
+```
+
+### CpfValidator
+```java
+import io.github.multiform_validator.CpfValidator;
+
+public class Main {
+    public static void main(String[] args) {
+        String cpfTrue = "123.456.789-09";
+        String cpfFalse = "123.456.789-10";
+        System.out.println(CpfValidator.cpfIsValid(cpfTrue)); // true
+        System.out.println(CpfValidator.cpfIsValid(cpfFalse)); // false
+    }
+}
+```
+
+### CreditCardValidator
+```java
+import io.github.multiform_validator.CreditCardValidator;
+
+public class Main {
+    public static void main(String[] args) {
+        String creditCard = "4532 8770 0040 4166";
+        System.out.println(CreditCardValidator.isCreditCardValid(creditCard)); // true
+        System.out.println(CreditCardValidator.identifyCreditCard(creditCard)); // Visa
+    }
+}
+```
+
+### EmailValidator
+```java
+import static io.github.multiform_validator.EmailValidator.isEmail;
+
+public class Main {
+    public static void main(String[] args) {
+        String email = "foo@bar.com";
+        System.out.println(isEmail(email)); // true
+    }
+}
+```
+
+### Utils
+```java
 import io.github.multiform_validator.Utils;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println(EmailValidator.isEmail("foo@bar.com")); // true
-        System.out.println(EmailValidator.isEmail("foo@bar")); // false
+        String msg1 = "This is a message example with foo@bar.com email to test";
+        System.out.println(Utils.getOnlyEmail(msg1)); // foo@bar.com
 
-        System.out.println(CpfValidator.cpfIsValid("123.456.789-09")); // true
-        System.out.println(CpfValidator.cpfIsValid("123.456.789-00")); // false
-        
-        System.out.println(CnpjValidator.cnpjIsValid("12.345.678/0001-09")); // true
-        System.out.println(CnpjValidator.cnpjIsValid("12.345.678/0001-00")); // false
-
-        System.out.println(Validator.isAscii("foo")); // true
-        System.out.println(Validator.isAscii("foo©")); // false
-        
-        System.out.println(Utils.getOnlyEmail("This is an example test1@email.com bla yes my friend loren ipsun")); // test1@email.com
-        System.out.println(Utils.getOnlyEmail("This is an example bla yes my friend loren ipsun")); // null
+        String msg2 = "Example two foo1@bar.com and foo2@bar.com";
         // With options
         Utils.GetOnlyEmailOptionsParams options = new Utils.GetOnlyEmailOptionsParams();
         options.multiple = true;
-        System.out.println(Utils.getOnlyEmail("This is an example test1@example.com bla test2@example.com yes yes", options)); // [test1@example.com, test2@example.com]
+        System.out.println(Utils.getOnlyEmailWithOptions(msg2, options)); // [foo1@bar.com, foo2@bar.com]
+    }
+}
+```
+
+### Validator
+```java
+import io.github.multiform_validator.Validator;
+
+public class Main {
+    public static void main(String[] args) {
+        validMethods();
+        invalidMethods();
+    }
+
+    public void validMethods () {
+        System.out.println(Validator.isAscii("foo")); // true
+        System.out.println(Validator.isCEP("12345-678")); // true
+        System.out.println(Validator.isDate("2021-01-01")); // true
+        System.out.println(Validator.isDecimal("1.5")); // true
+        System.out.println(Validator.isMACAddress("00:00:00:00:00:00")); // true
+        System.out.println(Validator.isNumber("123")); // true
+        System.out.println(Validator.isPort("8080")); // true
+        System.out.println(Validator.isPostalCode("12345-678")); // true
+        System.out.println(Validator.isTime("12:00")); // true
+    }
+
+    public void invalidMethods () {
+        System.out.println(Validator.isAscii("こんにちは")); // false
+        System.out.println(Validator.isCEP("12345678")); // false
+        System.out.println(Validator.isDate("2021-01-32")); // false
+        System.out.println(Validator.isDecimal("1.5.5")); // false
+        System.out.println(Validator.isMACAddress("00:00:00:00:00:00:00")); // false
+        System.out.println(Validator.isNumber("123a")); // false
+        System.out.println(Validator.isPort("8080a")); // false
+        System.out.println(Validator.isPostalCode("12345678")); // false
+        System.out.println(Validator.isTime("12:00:00")); // false
     }
 }
 ```
