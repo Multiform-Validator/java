@@ -81,9 +81,7 @@ public class Main {
 ### CpfValidator
 
 ```java
-// You can also import the method as static or use the full path
-
-import static io.github.multiform_validator.CpfValidator.cpfIsValid;
+import io.github.multiform_validator.CpfValidator;
 
 public class Main {
     public static void main(String[] args) {
