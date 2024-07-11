@@ -35,3 +35,13 @@ S
 #.github/workflows/java-pr-check.yml,6\d\6d7e0794b4bcc592eaba286aa7557da83ba765a5
 m
 =src/main/java/io/github/multiform_validator/CpfValidator.java,b\4\b4a2aa78fccd481c2a54c1b1f301c1651829b98c
+n
+>src/main/java/io/github/multiform_validator/FileValidator.java,d\9\d90a638069474de771e722f81c6e4f61b75eb1c4
+|
+Lsrc/main/java/io/github/multiform_validator/FileValidator/ValidateImage.java,d\f\df99130c3df382b199c34a94824d11e25467ed68
+t
+Dsrc/main/java/io/github/multiform_validator/Other/ValidateImage.java,3\c\3c8842d6f65bc0f21cf2bfc030702ffe7e82d70d
+t
+Dsrc/main/java/io/github/multiform_validator/other/ValidateImage.java,a\a\aa5999cb67ff93d7fa1f135c6ce35751a7f50782
+T
+$src/test/java/FileValidatorTest.java,6\e\6e481a8cc098ad8ab7f553fbd33042be7454e52a
