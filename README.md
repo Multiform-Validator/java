@@ -3,7 +3,7 @@
 
 # Multiform-validator
 
-## JAVA
+## JAVA >=8
 
 ## How to install
 
@@ -11,44 +11,61 @@ follow the steps below to use the library in your project.
 
 https://jitpack.io/#multiform-validator/java/
 
-## Available methods - JAVA (0.0.2)v
+## Available methods - JAVA (0.0.3)v
 
 - CnpjValidator
-  - cnpjIsValid
+    - cnpjIsValid
 
 - CpfValidator
-  - cpfIsValid
+    - cpfIsValid
 
 - CreditCardValidator
-  - isCreditCardValid
-  - identifyCreditCard
-
-- EmailValidator
-  - isEmail
+    - isCreditCardValid
+    - identifyCreditCard
 
 - Utils
-  - getOnlyEmail
-    - getOnlyEmailWithOptions (options)
-      - multiple (boolean) - default: false
-      - cleanDomain (boolean) - default: false
-      - repeatEmail (boolean) - default: false
+    - getOnlyEmail
+        - getOnlyEmailWithOptions (options)
+            - multiple (boolean) - default: false
+            - cleanDomain (boolean) - default: false
+            - repeatEmail (boolean) - default: false
+
+- Validate
+    - validateEmail
+        - maxLength (int) - default: 400
+        - country (String) - default: ""
+        - validDomains (boolean) - default: false
+        - validDomainsList (String[]) - default: ["@gmail.com",
+          "@outlook.com",
+          "@yahoo.com",
+          "@icloud.com",
+          "@hotmail.com",
+          "@mail.ru",
+          "@yandex.ru",
+          "@gmx.com",
+          "@zoho.com",
+          "@protonmail.com",
+          "@protonmail.ch"]
 
 - Validator
-  - isAscii
-  - isCEP
-  - isDate
-  - isDecimal
-  - isMACAddress
-  - isNumber
-  - isPort
-  - isPostalCode
-  - isTime
-
+    - isAscii
+    - isCEP
+    - isDate
+    - isDecimal
+    - isEmail
+    - isMACAddress
+    - isNumber
+    - isPort
+    - isPostalCode
+    - isTime
 
 ## How to use
 
 ### CnpjValidator
+
 ```java
+// You can import the class or use the full path
+
 import io.github.multiform_validator.CnpjValidator;
 
 public class Main {
@@ -62,20 +79,24 @@ public class Main {
 ```
 
 ### CpfValidator
+
 ```java
-import io.github.multiform_validator.CpfValidator;
+// You can also import the method as static or use the full path
+
+import static io.github.multiform_validator.CpfValidator.cpfIsValid;
 
 public class Main {
     public static void main(String[] args) {
         String cpfTrue = "123.456.789-09";
         String cpfFalse = "123.456.789-10";
-        System.out.println(CpfValidator.cpfIsValid(cpfTrue)); // true
-        System.out.println(CpfValidator.cpfIsValid(cpfFalse)); // false
+        System.out.println(cpfIsValid(cpfTrue)); // true
+        System.out.println(cpfIsValid(cpfFalse)); // false
     }
 }
 ```
 
 ### CreditCardValidator
+
 ```java
 import io.github.multiform_validator.CreditCardValidator;
 
@@ -88,19 +109,8 @@ public class Main {
 }
 ```
 
-### EmailValidator
-```java
-import static io.github.multiform_validator.EmailValidator.isEmail;
-
-public class Main {
-    public static void main(String[] args) {
-        String email = "foo@bar.com";
-        System.out.println(isEmail(email)); // true
-    }
-}
-```
-
 ### Utils
+
 ```java
 import io.github.multiform_validator.Utils;
 
@@ -119,6 +129,7 @@ public class Main {
 ```
 
 ### Validator
+
 ```java
 import io.github.multiform_validator.Validator;
 
@@ -128,7 +139,7 @@ public class Main {
         invalidMethods();
     }
 
-    public void validMethods () {
+    public void validMethods() {
         System.out.println(Validator.isAscii("foo")); // true
         System.out.println(Validator.isCEP("12345-678")); // true
         System.out.println(Validator.isDate("2021-01-01")); // true
@@ -138,9 +149,10 @@ public class Main {
         System.out.println(Validator.isPort("8080")); // true
         System.out.println(Validator.isPostalCode("12345-678")); // true
         System.out.println(Validator.isTime("12:00")); // true
+        System.out.println(Validator.isEmail("foo@bar.com")); // true
     }
 
-    public void invalidMethods () {
+    public void invalidMethods() {
         System.out.println(Validator.isAscii("こんにちは")); // false
         System.out.println(Validator.isCEP("12345678")); // false
         System.out.println(Validator.isDate("2021-01-32")); // false
@@ -150,6 +162,7 @@ public class Main {
         System.out.println(Validator.isPort("8080a")); // false
         System.out.println(Validator.isPostalCode("12345678")); // false
         System.out.println(Validator.isTime("12:00:00")); // false
+        System.out.println(Validator.isEmail("foo@bar")); // false
     }
 }
 ```

@@ -29,3 +29,9 @@ n
 >src/main/java/io/github/multiform_validator/CnpjValidator.java,8\8\8821b29c537b8a99cd1bc3d5df88d632f6f5d314
 o
 ?src/main/java/io/github/multiform_validator/EmailValidator.java,f\9\f9465a1df802c670887a6edc9706fd150e19342b
+i
+9src/main/java/io/github/multiform_validator/Validate.java,1\0\1035b95fde851fd8381dabb4da89dd79908aed9b
+O
+src/test/java/ValidateTest.java,c\7\c72d3c1c5a04f95a684f8e7a7c738010c95a16e8
+t
+Dsrc/main/java/io/github/multiform_validator/CreditCardValidator.java,b\4\b472df26aece629bb77df8ebac5827b71ed0a735

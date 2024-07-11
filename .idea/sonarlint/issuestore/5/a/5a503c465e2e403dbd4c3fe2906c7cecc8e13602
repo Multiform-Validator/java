@@ -1,7 +1,5 @@
 
-_
-java:S1192v"IDefine a constant instead of duplicating this literal "^\\d{5}$" 5 times.(ÀÕÜô
-_
-java:S1192w"IDefine a constant instead of duplicating this literal "^\\d{4}$" 3 times.(ëŸ¬â
-R
-java:S6353•"<Use concise character class syntax '\\d' instead of '[0-9]'.(£ÆD
+†
+java:S1192µ"IDefine a constant instead of duplicating this literal "^\\d{5}$" 5 times.(ÀÕÜôJ$48c2ec6a-2d2e-493b-b7f5-6fbd22e4683b
+†
+java:S1192¶"IDefine a constant instead of duplicating this literal "^\\d{4}$" 3 times.(ëŸ¬âJ$c1287132-184a-4d8b-925b-573839793c43

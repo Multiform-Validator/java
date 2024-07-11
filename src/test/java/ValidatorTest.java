@@ -46,6 +46,69 @@ class ValidatorTest {
     }
 
     @Test
+    void testValidEmail() {
+        assertTrue(Validator.isEmail("foo@bar.com"));
+        assertTrue(Validator.isEmail("Foo@Bar.com"));
+        assertTrue(Validator.isEmail("foo@bar.com.br"));
+    }
+
+    @Test
+    void testInvalidEmail() {
+        assertFalse(Validator.isEmail("foo@bar"));
+        assertFalse(Validator.isEmail("1foo@bar.com"));
+        assertFalse(Validator.isEmail("foo@1bar.com"));
+        assertFalse(Validator.isEmail("foo@bar.1com"));
+        assertFalse(Validator.isEmail("foo.bar.com"));
+        assertFalse(Validator.isEmail("joaoaoao@gmail.com.com"));
+        assertFalse(Validator.isEmail("joao..@gmail.com"));
+        assertFalse(Validator.isEmail("joao.@gmail.com"));
+        assertFalse(Validator.isEmail("joao@@gmail.com"));
+        assertFalse(Validator.isEmail("joao@gmail..com"));
+        assertFalse(Validator.isEmail(".foo@bar.com"));
+        assertFalse(Validator.isEmail(",foo@bar.com"));
+        assertFalse(Validator.isEmail("!foo@bar.com"));
+        assertFalse(Validator.isEmail("@foo@bar.com"));
+        assertFalse(Validator.isEmail("#foo@bar.com"));
+        assertFalse(Validator.isEmail("$foo@bar.com"));
+        assertFalse(Validator.isEmail("foo@@bar.com"));
+        assertFalse(Validator.isEmail("foo@bar.com.br.br"));
+        assertFalse(Validator.isEmail("foo@bar.com.com.br.br"));
+        assertFalse(Validator.isEmail("foo@bar.com.com.br"));
+        assertFalse(Validator.isEmail("foo!@bar.com"));
+        assertFalse(Validator.isEmail("foo bar@baz.com"));
+        assertFalse(Validator.isEmail(" foo@bar.com"));
+        assertFalse(Validator.isEmail("foo@bar.com "));
+        assertFalse(Validator.isEmail("foo..bar@baz.com"));
+        assertFalse(Validator.isEmail("foo@@bar.com"));
+        assertFalse(Validator.isEmail("foo@bar..com"));
+        assertFalse(Validator.isEmail("foo..bar@baz.com"));
+        assertFalse(Validator.isEmail("foo@bar.com.."));
+        assertFalse(Validator.isEmail("foo@bar..com"));
+        assertFalse(Validator.isEmail("foo..@bar.com"));
+        assertFalse(Validator.isEmail("foo@bar..com."));
+        assertFalse(Validator.isEmail("foo..@bar..com."));
+        assertFalse(Validator.isEmail("foo@bar.com..."));
+        assertFalse(Validator.isEmail("foo@bar!com"));
+        assertFalse(Validator.isEmail("foo!@bar.com"));
+        assertFalse(Validator.isEmail("foo@bar.c"));
+        assertFalse(Validator.isEmail("foo@bar."));
+        assertFalse(Validator.isEmail("foo@bar"));
+        assertFalse(Validator.isEmail("foo@bar."));
+        assertFalse(Validator.isEmail("foo@bar.."));
+        assertFalse(Validator.isEmail("foo@bar..."));
+    }
+
+    @Test
+    void testEmptyEmail() {
+        assertFalse(Validator.isEmail(""));
+    }
+
+    @Test
+    void testNullEmail() {
+        assertThrows(NullPointerException.class, () -> Validator.isEmail(null));
+    }
+
+    @Test
     void testIsMACAddress() {
         assertTrue(Validator.isMACAddress("00:1B:44:11:3A:B7"));
         assertFalse(Validator.isMACAddress("Hello World"));
