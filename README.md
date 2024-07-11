@@ -3,7 +3,7 @@
 
 # Multiform-validator
 
-## JAVA
+## JAVA >=8
 
 ## How to install
 
