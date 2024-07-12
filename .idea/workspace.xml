@@ -5,26 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="22c9667a-e00d-49e2-aa6d-da35dd213aa7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/java-pr-check.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/java-pr-check.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/c/3c8842d6f65bc0f21cf2bfc030702ffe7e82d70d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/a/aa5999cb67ff93d7fa1f135c6ce35751a7f50782" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/f/df99130c3df382b199c34a94824d11e25467ed68" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/3/c/3c8842d6f65bc0f21cf2bfc030702ffe7e82d70d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/a/a/aa5999cb67ff93d7fa1f135c6ce35751a7f50782" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/d/f/df99130c3df382b199c34a94824d11e25467ed68" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/0/1035b95fde851fd8381dabb4da89dd79908aed9b" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/0/1035b95fde851fd8381dabb4da89dd79908aed9b" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/8/5879b52636e240d2cfcbd5e54543d3959f957811" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/8/5879b52636e240d2cfcbd5e54543d3959f957811" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/a/5a503c465e2e403dbd4c3fe2906c7cecc8e13602" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/a/5a503c465e2e403dbd4c3fe2906c7cecc8e13602" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/multiform_validator/CreditCardValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/multiform_validator/CreditCardValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/multiform_validator/FileValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/multiform_validator/FileValidator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/io/github/multiform_validator/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/multiform_validator/Utils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/io/github/multiform_validator/Validate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/multiform_validator/Validate.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/io/github/multiform_validator/Validator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/multiform_validator/Validator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/CreditCardValidatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CreditCardValidatorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/FileValidatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/FileValidatorTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/UtilsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/UtilsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ValidateTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ValidateTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ValidatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ValidatorTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

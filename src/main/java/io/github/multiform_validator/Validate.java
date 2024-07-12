@@ -1,5 +1,7 @@
 package io.github.multiform_validator;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.*;
 import java.util.regex.*;
 
@@ -66,36 +68,46 @@ public class Validate {
      * @throws IllegalArgumentException if the input value is empty or if both validDomains and validDomainsList are used at the same time.
      */
     public static boolean validateEmail(String email, ValidateEmailOptionsParams options) {
-        if (options == null) {
-            options = validateEmailDefaultOptionsParams;
-        }
+        options = validateOptions(options);
 
         if (email == null || email.isEmpty()) {
             throw new IllegalArgumentException("Input value cannot be empty.");
+        }
+
+        Pattern regex = createRegexPattern(options);
+
+        return validateEmailWithRegex(email, regex, options);
+    }
+
+    private static @NotNull ValidateEmailOptionsParams validateOptions(ValidateEmailOptionsParams options) {
+        if (options == null) {
+            options = validateEmailDefaultOptionsParams;
         }
 
         if (options.validDomains && !options.validDomainsList.isEmpty()) {
             throw new IllegalArgumentException("Cannot use validDomains and validDomainsList at the same time.");
         }
 
-        int maxLength = options.maxLength > 0 ? options.maxLength : validateEmailDefaultOptionsParams.maxLength;
-        String country = options.country != null ? options.country : validateEmailDefaultOptionsParams.country;
+        return options;
+    }
+
+    private static @NotNull Pattern createRegexPattern(@NotNull ValidateEmailOptionsParams options) {
         List<String> validDomains = options.validDomains ? validateEmailDefaultOptionsParams.validDomainsList : options.validDomainsList;
 
-        // Initialize with an empty regular expression
-        Pattern regex = Pattern.compile("");
         List<String> validDomainsCustom = new ArrayList<>();
-
         if (validDomains != null && !validDomains.isEmpty()) {
             for (String domain : validDomains) {
                 validDomainsCustom.add(domain.replaceAll("[.*+?^${}()|\\[\\]\\\\]", "\\\\$0"));
             }
-            regex = Pattern.compile(String.join("|", validDomainsCustom) + "$", Pattern.CASE_INSENSITIVE);
+            return Pattern.compile(String.join("|", validDomainsCustom) + "$", Pattern.CASE_INSENSITIVE);
         } else if (validDomains != null) {
-            regex = Pattern.compile(String.join("|", validateEmailValidDomainsDefault) + "$", Pattern.CASE_INSENSITIVE);
+            return Pattern.compile(String.join("|", validateEmailValidDomainsDefault) + "$", Pattern.CASE_INSENSITIVE);
         }
 
-        // Use the Matcher to check if the email ends with one of the valid domains
+        return Pattern.compile("");
+    }
+
+    private static boolean validateEmailWithRegex(String email, @NotNull Pattern regex, ValidateEmailOptionsParams options) {
         Matcher matcher = regex.matcher(email);
         if (!matcher.find()) {
             return false;
@@ -105,13 +117,12 @@ public class Validate {
             return false;
         }
 
-        if (email.length() > maxLength) {
+        if (email.length() > options.maxLength) {
             return false;
         }
 
-        // If country is provided, check if the email ends with the country code
-        if (country != null && !country.isEmpty()) {
-            return email.endsWith("." + country);
+        if (options.country != null && !options.country.isEmpty()) {
+            return email.endsWith("." + options.country);
         }
 
         return true;

@@ -1,5 +1,7 @@
 package io.github.multiform_validator;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.*;
 import java.util.regex.*;
 
@@ -36,14 +38,34 @@ public class Utils {
      * @return The extracted email addresses.
      */
     public static Object getOnlyEmail(String text, GetOnlyEmailOptionsParams options) {
+        options = validateOptions(options);
+
+        List<String> matches = getEmailMatches(text);
+
+        if (matches.isEmpty()) {
+            return "No email found";
+        }
+
+        if (options.cleanDomain != null && !options.cleanDomain.equals(false)) {
+            matches = cleanDomain(matches, options.cleanDomain);
+        }
+
+        return handleRepeatEmail(matches, options);
+    }
+
+    private static @NotNull GetOnlyEmailOptionsParams validateOptions(GetOnlyEmailOptionsParams options) {
         if (options == null) {
             options = getOnlyEmailDefaultOptionsParams;
         }
 
-        Boolean multiple = options.multiple != null ? options.multiple : getOnlyEmailDefaultOptionsParams.multiple;
-        Object cleanDomain = options.cleanDomain != null ? options.cleanDomain : getOnlyEmailDefaultOptionsParams.cleanDomain;
-        Boolean repeatEmail = options.repeatEmail != null ? options.repeatEmail : getOnlyEmailDefaultOptionsParams.repeatEmail;
+        options.multiple = options.multiple != null ? options.multiple : getOnlyEmailDefaultOptionsParams.multiple;
+        options.cleanDomain = options.cleanDomain != null ? options.cleanDomain : getOnlyEmailDefaultOptionsParams.cleanDomain;
+        options.repeatEmail = options.repeatEmail != null ? options.repeatEmail : getOnlyEmailDefaultOptionsParams.repeatEmail;
 
+        return options;
+    }
+
+    private static @NotNull List<String> getEmailMatches(String text) {
         Pattern emailPattern = Pattern.compile("[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}");
         Matcher matcher = emailPattern.matcher(text);
 
@@ -52,46 +74,49 @@ public class Utils {
             matches.add(matcher.group());
         }
 
-        if (matches.isEmpty()) {
-            return "No email found";
+        return matches;
+    }
+
+    private static @NotNull List<String> cleanDomain(@NotNull List<String> emails, Object cleanDomain) {
+        List<String> domainsToClean;
+
+        if (cleanDomain instanceof List) {
+            @SuppressWarnings("unchecked")
+            List<String> castedList = (List<String>) cleanDomain;
+            domainsToClean = castedList;
+        } else {
+            domainsToClean = GetOnlyEmailCleanAfterDefaultDomain;
         }
 
-        if (cleanDomain != null && !cleanDomain.equals(false)) {
-            List<String> domainsToClean = cleanDomain instanceof List ? (List<String>) cleanDomain : GetOnlyEmailCleanAfterDefaultDomain;
-
-            List<String> cleanedEmails = new ArrayList<>();
-            for (String email : matches) {
-                for (String domain : domainsToClean) {
-                    int index = email.lastIndexOf(domain);
-                    if (index != -1) {
-                        email = email.substring(0, index + domain.length());
-                        break;
-                    }
+        List<String> cleanedEmails = new ArrayList<>();
+        for (String email : emails) {
+            for (String domain : domainsToClean) {
+                int index = email.lastIndexOf(domain);
+                if (index != -1) {
+                    email = email.substring(0, index + domain.length());
+                    break;
                 }
-
-                for (String domain : domainsToClean) {
-                    int index = email.indexOf(domain);
-                    if (index != -1) {
-                        email = email.substring(0, index + domain.length());
-                        break;
-                    }
-                }
-                cleanedEmails.add(email);
             }
 
-            if (Boolean.FALSE.equals(repeatEmail)) {
-                Set<String> uniqueEmails = new LinkedHashSet<>(cleanedEmails);
-                return Boolean.TRUE.equals(multiple) ? new ArrayList<>(uniqueEmails) : uniqueEmails.iterator().next();
+            for (String domain : domainsToClean) {
+                int index = email.indexOf(domain);
+                if (index != -1) {
+                    email = email.substring(0, index + domain.length());
+                    break;
+                }
             }
-
-            return Boolean.TRUE.equals(multiple) ? cleanedEmails : cleanedEmails.get(0);
+            cleanedEmails.add(email);
         }
 
-        if (Boolean.FALSE.equals(repeatEmail)) {
-            Set<String> uniqueEmails = new LinkedHashSet<>(matches);
-            return Boolean.TRUE.equals(multiple) ? new ArrayList<>(uniqueEmails) : uniqueEmails.iterator().next();
+        return cleanedEmails;
+    }
+
+    private static Object handleRepeatEmail(List<String> emails, @NotNull GetOnlyEmailOptionsParams options) {
+        if (Boolean.FALSE.equals(options.repeatEmail)) {
+            Set<String> uniqueEmails = new LinkedHashSet<>(emails);
+            return Boolean.TRUE.equals(options.multiple) ? new ArrayList<>(uniqueEmails) : uniqueEmails.iterator().next();
         }
 
-        return Boolean.TRUE.equals(multiple) ? matches : matches.get(0);
+        return Boolean.TRUE.equals(options.multiple) ? emails : emails.get(0);
     }
 }

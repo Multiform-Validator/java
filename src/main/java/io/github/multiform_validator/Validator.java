@@ -311,33 +311,17 @@ public class Validator {
             throw new IllegalArgumentException("Input value must be a string.");
         }
 
-        final String usZipCodeRegex = "^\\d{5}(-\\d{4})?$";
-        final String canadaPostalCodeRegex = "^[A-Za-z]\\d[A-Za-z] \\d[A-Za-z]\\d$";
-        final String ukPostalCodeRegex = "^[A-Za-z]{1,2}\\d[A-Za-z\\d]? \\d[A-Za-z]{2}$";
-        final String francePostalCodeRegex = "^\\d{5}$";
-        final String netherlandsPostalCodeRegex = "^\\d{4}$";
-        final String japanPostalCodeRegex = "^\\d{3}-\\d{4}$";
-        final String spainPostalCodeRegex = "^\\d{5}$";
-        final String southAfricaPostalCodeRegex = "^\\d{4}$";
-        final String germanyPostalCodeRegex = "^\\d{5}$";
-        final String switzerlandPostalCodeRegex = "^\\d{4}$";
-        final String brazilPostalCodeRegex = "^\\d{5}-\\d{3}$";
-        final String italyPostalCodeRegex = "^\\d{5}$";
-        final String usZipCodeOnlyRegex = "^\\d{5}$";
+        final String REGEX_TEST1 = "^\\d{5}(-\\d{4})?$"; // US ZIP code
+        final String REGEX_TEST2 = "^[A-Za-z]\\d[A-Za-z] \\d[A-Za-z]\\d$"; // Canada postal code
+        final String REGEX_TEST3 = "^[A-Za-z]{1,2}\\d[A-Za-z\\d]? \\d[A-Za-z]{2}$"; // UK postal code
+        final String REGEX_TEST4 = "^\\d{5}$"; // France, Spain, Italy, Germany, US postal code
+        final String REGEX_TEST5 = "^\\d{4}$"; // Netherlands, South Africa, Switzerland postal code
+        final String REGEX_TEST6 = "^\\d{3}-\\d{4}$"; // Japan postal code
+        final String REGEX_TEST7 = "^\\d{5}-\\d{3}$"; // Brazil postal code
 
-        return postalCode.matches(usZipCodeRegex) ||
-                postalCode.matches(canadaPostalCodeRegex) ||
-                postalCode.matches(ukPostalCodeRegex) ||
-                postalCode.matches(francePostalCodeRegex) ||
-                postalCode.matches(netherlandsPostalCodeRegex) ||
-                postalCode.matches(japanPostalCodeRegex) ||
-                postalCode.matches(spainPostalCodeRegex) ||
-                postalCode.matches(southAfricaPostalCodeRegex) ||
-                postalCode.matches(germanyPostalCodeRegex) ||
-                postalCode.matches(switzerlandPostalCodeRegex) ||
-                postalCode.matches(brazilPostalCodeRegex) ||
-                postalCode.matches(italyPostalCodeRegex) ||
-                postalCode.matches(usZipCodeOnlyRegex);
+        return postalCode.matches(REGEX_TEST1) || postalCode.matches(REGEX_TEST2) || postalCode.matches(REGEX_TEST3)
+                || postalCode.matches(REGEX_TEST4) || postalCode.matches(REGEX_TEST5) || postalCode.matches(REGEX_TEST6)
+                || postalCode.matches(REGEX_TEST7);
     }
 
     // ##############################################################################################################
