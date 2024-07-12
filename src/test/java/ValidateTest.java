@@ -5,6 +5,10 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class ValidateTest {
+    // ##############################################################################################################
+    // ##############################################################################################################
+    // ##############################################################################################################
+    // Test ValidateEmail
     @Test
     void testValidateEmail() {
         // Test with valid email
@@ -12,12 +16,6 @@ class ValidateTest {
 
         // Test with invalid email
         assertFalse(Validate.validateEmail("foo@bar"));
-
-        // Test with empty email
-        assertThrows(IllegalArgumentException.class, () -> Validate.validateEmail(""));
-
-        // Test with null email
-        assertThrows(IllegalArgumentException.class, () -> Validate.validateEmail(null));
 
         // Test with maxLength option
         ValidateEmailOptionsParams options1 = new ValidateEmailOptionsParams();
@@ -39,19 +37,28 @@ class ValidateTest {
 
         // Test with validDomainsList option
         ValidateEmailOptionsParams options4 = new ValidateEmailOptionsParams();
-        options4.validDomainsList.add("@myownemail.com");
-        assertTrue(Validate.validateEmail("foo@myownemail.com", options4));
+        options4.validDomainsList.add("@voicemail.com");
+        assertTrue(Validate.validateEmail("foo@voicemail.com", options4));
         assertFalse(Validate.validateEmail("foo@gmail.com", options4));
 
         // Test with validDomains and validDomainsList options at the same time
         ValidateEmailOptionsParams options5 = new ValidateEmailOptionsParams();
         options5.validDomains = true;
-        options5.validDomainsList.add("@myownemail.com");
+        options5.validDomainsList.add("@voicemail.com");
         assertThrows(IllegalArgumentException.class, () -> Validate.validateEmail("foo@gmail.com", options5));
 
         // Test with invalid domain
         ValidateEmailOptionsParams options6 = new ValidateEmailOptionsParams();
         options6.validDomains = true;
         assertFalse(Validate.validateEmail("foo@bar.com", options6));
+    }
+
+    @Test
+    void testValidateEmailThrows() {
+        // Test with empty email
+        assertThrows(IllegalArgumentException.class, () -> Validate.validateEmail(""));
+
+        // Test with null email
+        assertThrows(IllegalArgumentException.class, () -> Validate.validateEmail(null));
     }
 }

@@ -5,6 +5,11 @@ import static io.github.multiform_validator.CreditCardValidator.isCreditCardVali
 import static org.junit.jupiter.api.Assertions.*;
 
 class CreditCardValidatorTest {
+
+    // ##############################################################################################################
+    // ##############################################################################################################
+    // ##############################################################################################################
+    // Test IsCreditCardValid
     @Test
     void testIsCreditCardValid() {
         assertTrue(isCreditCardValid("4111111111111111"));
@@ -14,6 +19,11 @@ class CreditCardValidatorTest {
         assertThrows(IllegalArgumentException.class, () -> isCreditCardValid(null));
         assertThrows(IllegalArgumentException.class, () -> isCreditCardValid(""));
     }
+
+    // ##############################################################################################################
+    // ##############################################################################################################
+    // ##############################################################################################################
+    // Test IdentifyFlagCard
 
     @Test
     void testIdentifyFlagCard() {

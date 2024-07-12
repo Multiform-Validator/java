@@ -53,7 +53,7 @@ class ValidatorTest {
     }
 
     @Test
-    void testInvalidEmail() {
+    void testInvalidEmail1() {
         assertFalse(Validator.isEmail("foo@bar"));
         assertFalse(Validator.isEmail("1foo@bar.com"));
         assertFalse(Validator.isEmail("foo@1bar.com"));
@@ -74,6 +74,10 @@ class ValidatorTest {
         assertFalse(Validator.isEmail("foo@bar.com.br.br"));
         assertFalse(Validator.isEmail("foo@bar.com.com.br.br"));
         assertFalse(Validator.isEmail("foo@bar.com.com.br"));
+    }
+
+    @Test
+    void testInvalidEmail2() {
         assertFalse(Validator.isEmail("foo!@bar.com"));
         assertFalse(Validator.isEmail("foo bar@baz.com"));
         assertFalse(Validator.isEmail(" foo@bar.com"));
