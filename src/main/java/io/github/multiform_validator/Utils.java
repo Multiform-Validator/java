@@ -23,9 +23,21 @@ public class Utils {
      * Options for the getOnlyEmail method.
      */
     public static class GetOnlyEmailOptionsParams {
-        public Boolean multiple = false;
-        public Object cleanDomain = false;
-        public Boolean repeatEmail = false;
+        private Boolean multiple = false;
+        private Object cleanDomain = false;
+        private Boolean repeatEmail = false;
+
+        public void setMultiple(Boolean multiple) {
+            this.multiple = multiple;
+        }
+
+        public void setCleanDomain(Object cleanDomain) {
+            this.cleanDomain = cleanDomain;
+        }
+
+        public void setRepeatEmail(Boolean repeatEmail) {
+            this.repeatEmail = repeatEmail;
+        }
     }
 
     private static final GetOnlyEmailOptionsParams getOnlyEmailDefaultOptionsParams = new GetOnlyEmailOptionsParams();

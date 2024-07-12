@@ -17,7 +17,7 @@ public class Validate {
     // ##############################################################################################################
     // ##############################################################################################################
     // validateEmail
-    
+
     /**
      * The default list of valid email domains.
      */
@@ -39,10 +39,26 @@ public class Validate {
      * The ValidateEmailOptionsParams class represents the options for email validation.
      */
     public static class ValidateEmailOptionsParams {
-        public int maxLength = 400;
-        public String country = "";
-        public boolean validDomains = false;
-        public List<String> validDomainsList = new ArrayList<>();
+        private int maxLength = 400;
+        private String country = "";
+        private boolean validDomains = false;
+        private List<String> validDomainsList = new ArrayList<>();
+
+        public void setMaxLength(int maxLength) {
+            this.maxLength = maxLength;
+        }
+
+        public void setCountry(String country) {
+            this.country = country;
+        }
+
+        public void setValidDomains(boolean validDomains) {
+            this.validDomains = validDomains;
+        }
+
+        public void setValidDomainsList(List<String> validDomainsList) {
+            this.validDomainsList = validDomainsList;
+        }
     }
 
     // Default options for email validation
@@ -62,7 +78,7 @@ public class Validate {
     /**
      * Validates an email address using the specified options.
      *
-     * @param email The email address to validate.
+     * @param email   The email address to validate.
      * @param options The options for email validation.
      * @return true if the email address is valid, false otherwise.
      * @throws IllegalArgumentException if the input value is empty or if both validDomains and validDomainsList are used at the same time.
