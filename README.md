@@ -23,11 +23,26 @@ https://jitpack.io/#multiform-validator/java/
     - isCreditCardValid
     - identifyCreditCard
 
+- FileValidator
+    - isValidAudio
+        - file (File) - required
+          - audioExtensions (String[]) - default: ["mp3", "wav"]
+          - You can exclude the extensions you don't want to validate
+    - isValidImage
+        - file (File) - required
+          - imageExtensions (String[]) - default: ["ico", "jpeg", "png", "gif"]
+          - You can exclude the extensions you don't want to validate
+    - isValidPdf
+        - file (File) - required
+          - pdfExtensions (String) - default: "pdf"
+    - isValidTxt
+        - file (File) - required
+          - txtExtensions (String) - default: "txt"
 - Utils
     - getOnlyEmail
         - getOnlyEmailWithOptions (options)
             - multiple (boolean) - default: false
-            - cleanDomain (boolean) - default: false
+            - cleanDomain (boolean | Arrays<String>) - default: false
             - repeatEmail (boolean) - default: false
 
 - Validate
@@ -109,6 +124,34 @@ public class Main {
 }
 ```
 
+### FileValidator
+
+```java
+import io.github.multiform_validator.FileValidator;
+
+import java.io.File;
+
+public class Main {
+    public static void main(String[] args) {
+        File file = new File("path/to/file");
+        System.out.println(FileValidator.isValidAudio(file)); // true | false
+        System.out.println(FileValidator.isValidImage(file)); // true | false
+        System.out.println(FileValidator.isValidPdf(file)); // true | false
+        System.out.println(FileValidator.isValidTxt(file)); // true | false
+        
+        exampleExcludingExtensions();
+    }
+    
+    public static void exampleExcludingExtensions() {
+        File file = new File("path/to/file");
+        String[] audioExtensions = {"mp3"};
+        String[] imageExtensions = {"ico", "jpeg", "png"};
+        System.out.println(FileValidator.isValidAudio(file, audioExtensions)); // true | false
+        System.out.println(FileValidator.isValidImage(file, imageExtensions)); // false | true
+    }
+}
+```
+
 ### Utils
 
 ```java
@@ -117,12 +160,12 @@ import io.github.multiform_validator.Utils;
 public class Main {
     public static void main(String[] args) {
         String msg1 = "This is a message example with foo@bar.com email to test";
-        System.out.println(Utils.getOnlyEmail(msg1)); // foo@bar.com
+        System.out.println(Utils.getOnlyEmail(msg1, null)); // foo@bar.com
 
         String msg2 = "Example two foo1@bar.com and foo2@bar.com";
         // With options
         Utils.GetOnlyEmailOptionsParams options = new Utils.GetOnlyEmailOptionsParams();
-        options.multiple = true;
+        options.setMultiple(true);
         System.out.println(Utils.getOnlyEmailWithOptions(msg2, options)); // [foo1@bar.com, foo2@bar.com]
     }
 }
@@ -133,6 +176,8 @@ public class Main {
 ```java
 import io.github.multiform_validator.Validate;
 import io.github.multiform_validator.Validate.ValidateEmailOptionsParams;
+
+import java.util.Collections;
 
 public class Main {
     public static void main(String[] args) {
@@ -148,13 +193,13 @@ public class Main {
 
         // Email validation with options: maxLength
         ValidateEmailOptionsParams optionsMaxLength = new ValidateEmailOptionsParams();
-        optionsMaxLength.maxLength = 10; // Setting max length to 10, which should fail for longer emails
+        optionsMaxLength.setMaxLength(10); // Setting max length to 10, which should fail for longer emails
         boolean isValidMaxLength = Validate.validateEmail("longemail@example.com", optionsMaxLength);
         System.out.println("Is valid with maxLength: " + isValidMaxLength); // Expected: false
 
         // Email validation with options: country specific
         ValidateEmailOptionsParams optionsCountry = new ValidateEmailOptionsParams();
-        optionsCountry.country = "us"; // Expecting an email from the US
+        optionsCountry.setCountry("us"); // Expecting an email from the US
         boolean isNotValidCountry = Validate.validateEmail("example@domain.com", optionsCountry);
         boolean isValidCountry = Validate.validateEmail("example@domain.com.us", optionsCountry);
         System.out.println("Is not valid with country: " + isNotValidCountry); // Expected: false
@@ -162,13 +207,13 @@ public class Main {
 
         // Email validation with options: validDomains
         ValidateEmailOptionsParams optionsValidDomains = new ValidateEmailOptionsParams();
-        optionsValidDomains.validDomains = true; // Only allow certain domains (implementation specific)
+        optionsValidDomains.setValidDomains(true); // Only allow certain domains (implementation specific)
         boolean isValidValidDomains = Validate.validateEmail("example@gmail.com", optionsValidDomains);
         System.out.println("Is valid with validDomains: " + isValidValidDomains); // Expected: true
 
         // Email validation with options: validDomainsList
         ValidateEmailOptionsParams optionsValidDomainsList = new ValidateEmailOptionsParams();
-        optionsValidDomainsList.validDomainsList.add("specificdomain.com"); // Adding a specific domain to the list
+        optionsValidDomainsList.setValidDomainsList(Collections.singletonList("specificdomain.com")); // Adding a specific domain to the list
         boolean isValidValidDomainsList = Validate.validateEmail("example@specificdomain.com", optionsValidDomainsList);
         System.out.println("Is valid with validDomainsList: " + isValidValidDomainsList); // Expected: true
     }
