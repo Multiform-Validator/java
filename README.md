@@ -11,7 +11,7 @@ follow the steps below to use the library in your project.
 
 https://jitpack.io/#multiform-validator/java/
 
-## Available methods - JAVA (0.0.3)v
+## Available methods - JAVA (0.0.4)v
 
 - CnpjValidator
     - cnpjIsValid
