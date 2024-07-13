@@ -28,6 +28,8 @@ follow the steps below to use the library in your project.
 </dependency>
 ```
 
+## Documentation
+
 See the documentation for more information.
 
 - [Multiform Validator - Web doc](https://multiform-validator.github.io/java/)
