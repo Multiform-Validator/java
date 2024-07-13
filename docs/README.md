@@ -44,6 +44,7 @@ dependencies {
 ```
 
 </details>
+
 <details>
   <summary>Maven</summary>
 
@@ -71,6 +72,7 @@ Step 2. Add the dependency
 ```
 
 </details>
+
 <details>
   <summary>Sbt</summary>
 
