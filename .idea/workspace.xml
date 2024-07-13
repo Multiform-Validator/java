@@ -4,26 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="22c9667a-e00d-49e2-aa6d-da35dd213aa7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.github/FUNDING.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/FUNDING.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/ISSUE_TEMPLATE/bug_report.md" beforeDir="false" afterPath="$PROJECT_DIR$/.github/ISSUE_TEMPLATE/bug_report.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/workflows/java-pr-check.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/java-pr-check.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/workflows/maven-publish.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/maven-publish.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CODE_OF_CONDUCT.md" beforeDir="false" afterPath="$PROJECT_DIR$/CODE_OF_CONDUCT.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CONTRIBUTING.md" beforeDir="false" afterPath="$PROJECT_DIR$/CONTRIBUTING.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SECURITY.md" beforeDir="false" afterPath="$PROJECT_DIR$/SECURITY.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/classes/CnpjValidator.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/classes/CnpjValidator.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/classes/FileValidator.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/classes/FileValidator.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/multiform_validator/CnpjValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/multiform_validator/CnpjValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/multiform_validator/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/multiform_validator/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/multiform_validator/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/multiform_validator/Utils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/multiform_validator/Validate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/multiform_validator/Validate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/multiform_validator/Validator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/multiform_validator/Validator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/UtilsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/UtilsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ValidatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ValidatorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/assets/isValidImage/valid/valid.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/assets/isValidImage/valid/valid.svg" afterDir="false" />
-    </list>
+    <list default="true" id="22c9667a-e00d-49e2-aa6d-da35dd213aa7" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

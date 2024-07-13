@@ -40,7 +40,7 @@ Step 2. Add the dependency
 
 ```gradle
 dependencies {
-        implementation 'com.github.Multiform-Validator:java:0.0.4'
+        implementation 'com.github.Multiform-Validator:java:0.0.5'
 }
 ```
 
@@ -68,7 +68,7 @@ Step 2. Add the dependency
 <dependency>
     <groupId>com.github.Multiform-Validator</groupId>
     <artifactId>java</artifactId>
-    <version>0.0.4</version>
+    <version>0.0.5</version>
 </dependency>
 ```
 
@@ -88,7 +88,7 @@ resolvers += "jitpack" at "https://jitpack.io"
 Step 2. Add the dependency
 
 ```sbt
-libraryDependencies += "com.github.Multiform-Validator" % "java" % "0.0.4"
+libraryDependencies += "com.github.Multiform-Validator" % "java" % "0.0.5"
 ```
 
 </details>
@@ -107,12 +107,12 @@ Add it in your project.clj at the end of repositories:
 Step 2. Add the dependency
 
 ```clojure
-:dependencies [[com.github.Multiform-Validator/java "0.0.4"]]
+:dependencies [[com.github.Multiform-Validator/java "0.0.5"]]
 ```
 
 </details>
 
-## Available methods - JAVA (0.0.4)v
+## Available methods - JAVA (0.0.5)v
 
 - [CnpjValidator](https://multiform-validator.github.io/java/classes/CnpjValidator)
 
