@@ -23,6 +23,7 @@ follow the steps below to use the library in your project.
   <summary>Gradle</summary>
 
 Step 1. Add the JitPack repository to your build file
+
 Add it in your root build.gradle at the end of repositories:
 
 ```gradle
@@ -77,6 +78,7 @@ Step 2. Add the dependency
   <summary>Sbt</summary>
 
 Step 1. Add the JitPack repository to your build file
+
 Add it in your build.sbt at the end of resolvers:
 
 ```sbt
@@ -95,6 +97,7 @@ libraryDependencies += "com.github.Multiform-Validator" % "java" % "0.0.4"
   <summary>Leiningen</summary>
 
 Step 1. Add the JitPack repository to your build file
+
 Add it in your project.clj at the end of repositories:
 
 ```clojure
