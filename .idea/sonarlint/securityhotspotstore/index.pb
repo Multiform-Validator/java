@@ -39,3 +39,7 @@ n
 >src/main/java/io/github/multiform_validator/FileValidator.java,d\9\d90a638069474de771e722f81c6e4f61b75eb1c4
 T
 $src/test/java/FileValidatorTest.java,6\e\6e481a8cc098ad8ab7f553fbd33042be7454e52a
+>
+docs/README.md,9\f\9f7cbce127b94a94ee14460050fbff2ce58417d0
+;
+docs/404.md,b\6\b6f27eeb3cb5e9201c2c6debd7aba2209523a60d
