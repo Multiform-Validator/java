@@ -21,28 +21,85 @@ The `FileValidator` class is used to validate files. It has the following method
 
 ## How to use
 
+### isValidAudio
+
 ```java
-import io.github.multiform_validator.FileValidator;
+import static io.github.multiform_validator.FileValidator.isValidAudio;
 
 import java.io.File;
 
 public class Main {
     public static void main(String[] args) {
-        File file = new File("path/to/file");
-        System.out.println(FileValidator.isValidAudio(file)); // true | false
-        System.out.println(FileValidator.isValidImage(file)); // true | false
-        System.out.println(FileValidator.isValidPdf(file)); // true | false
-        System.out.println(FileValidator.isValidTxt(file)); // true | false
-
+        File file = new File("src/main/resources/audio.mp3");
+        System.out.println(isValidAudio(file)); // true | false
+        
         exampleExcludingExtensions();
     }
-
+    
     public static void exampleExcludingExtensions() {
-        File file = new File("path/to/file");
+        File file = new File("src/main/resources/audio.mp3");
         String[] audioExtensions = {"mp3"};
+        System.out.println(isValidAudio(file, audioExtensions)); // false
+    }
+}
+```
+
+### isValidImage
+
+```java
+import static io.github.multiform_validator.FileValidator.isValidImage;
+
+import java.io.File;
+
+public class Main {
+    public static void main(String[] args) {
+        File file = new File("src/main/resources/image.png");
+        System.out.println(isValidImage(file)); // true | false
+        
+        exampleExcludingExtensions();
+        example2ExcludingExtensions();
+    }
+    
+    public static void exampleExcludingExtensions() {
+        File file = new File("src/main/resources/image.png");
         String[] imageExtensions = {"ico", "jpeg", "png"};
-        System.out.println(FileValidator.isValidAudio(file, audioExtensions)); // true | false
-        System.out.println(FileValidator.isValidImage(file, imageExtensions)); // false | true
+        System.out.println(isValidImage(file, imageExtensions)); // false
+    }
+    
+    public static void example2ExcludingExtensions() {
+        File file = new File("src/main/resources/image.png");
+        String[] imageExtensions = {"ico", "jpeg"};
+        System.out.println(isValidImage(file, imageExtensions)); // true | false
+    }
+}
+```
+
+### isValidPdf
+
+```java
+import static io.github.multiform_validator.FileValidator.isValidPdf;
+
+import java.io.File;
+
+public class Main {
+    public static void main(String[] args) {
+        File file = new File("src/main/resources/file.pdf");
+        System.out.println(isValidPdf(file)); // true | false
+    }
+}
+```
+
+### isValidTxt
+
+```java
+import static io.github.multiform_validator.FileValidator.isValidTxt;
+
+import java.io.File;
+
+public class Main {
+    public static void main(String[] args) {
+        File file = new File("src/main/resources/file.txt");
+        System.out.println(isValidTxt(file)); // true | false
     }
 }
 ```

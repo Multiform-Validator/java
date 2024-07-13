@@ -12,10 +12,18 @@ import io.github.multiform_validator.CnpjValidator;
 
 public class Main {
     public static void main(String[] args) {
+        System.out.println(cnpjIsTrue()); // true
+        System.out.println(cnpjIsFalse()); // false
+    }
+    
+    public static boolean cnpjIsTrue() {
         String cnpjTrue = "69.807.668/0001-41";
+        return CnpjValidator.cnpjIsValid(cnpjTrue);
+    }
+    
+    public static boolean cnpjIsFalse() {
         String cnpjFalse = "61.807.661/0001-48";
-        System.out.println(CnpjValidator.cnpjIsValid(cnpjTrue)); // true
-        System.out.println(CnpjValidator.cnpjIsValid(cnpjFalse)); // false
+        return CnpjValidator.cnpjIsValid(cnpjFalse);
     }
 }
 ```

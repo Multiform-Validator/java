@@ -12,10 +12,16 @@ import io.github.multiform_validator.CreditCardValidator;
 
 public class Main {
     public static void main(String[] args) {
-        String creditCardTrue = "4532 8770 0040 4166";
-        String creditCardFalse = "4532 8770 0040 4167";
-        System.out.println(CreditCardValidator.isCreditCardValid(creditCardTrue)); // true
-        System.out.println(CreditCardValidator.isCreditCardValid(creditCardFalse)); // false
+        valid();
+        invalid();
+    }
+    
+    private static void valid() {
+        System.out.println(CreditCardValidator.isCreditCardValid("4532 8770 0040 4166")); // true
+    }
+    
+    private static void invalid() {
+        System.out.println(CreditCardValidator.isCreditCardValid("4532 8770 0040 4167")); // false
     }
 }
 ```
