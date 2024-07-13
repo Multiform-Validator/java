@@ -47,3 +47,13 @@ M
 docs/classes/CnpjValidator.md,e\f\ef5c795fa997c1fde7572ebc50019a7f542b6de3
 L
 docs/classes/CpfValidator.md,3\7\37a2bd0ac1d596813e668677d4cda443af3c82b2
+S
+#docs/classes/CreditCardValidator.md,d\8\d87f992b2bfe5407921c143a17dddc1c48818247
+M
+docs/classes/FileValidator.md,f\c\fc5c40cf56bde0ed00f702912040d14c7a3d163d
+E
+docs/classes/Utils.md,1\5\15a6e0cffdd20108561c3ba173365425592a9cce
+H
+docs/classes/Validate.md,f\1\f1a6ae1a81b2873e9d16979d220bb8e583eeed3c
+I
+docs/classes/Validator.md,e\3\e39d43ca39384f3ae643880ba15c91da9db36261

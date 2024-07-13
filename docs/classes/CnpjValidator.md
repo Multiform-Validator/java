@@ -19,3 +19,14 @@ public class Main {
     }
 }
 ```
+
+## Other classes validation methods
+
+- [CpfValidator](https://multiform-validator.github.io/java/classes/CpfValidator)
+- [CreditCardValidator](https://multiform-validator.github.io/java/classes/CreditCardValidator)
+- [FileValidator](https://multiform-validator.github.io/java/classes/FileValidator)
+- [Utils](https://multiform-validator.github.io/java/classes/Utils)
+- [Validate](https://multiform-validator.github.io/java/classes/Validate)
+- [Validator](https://multiform-validator.github.io/java/classes/Validator)
+
+## Return to [Home](https://multiform-validator.github.io/java/)
