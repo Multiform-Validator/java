@@ -13,11 +13,41 @@
 
 - [Multiform-Validator](https://github.com/Multiform-Validator/java/)
 
-## How to install
+## 📦 Download / Installation
 
 follow the steps below to use the library in your project.
 
-- [jitpack.io](https://jitpack.io/#Multiform-Validator/java) - Add the repository in your pom.xml
+- [jitpack.io](https://jitpack.io/#Multiform-Validator/java) - Multiform Validator
+
+<details>
+  <summary>Gradle</summary>
+
+Step 1. Add the JitPack repository to your build file
+Add it in your root build.gradle at the end of repositories:
+
+```gradle
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+    }
+}
+```
+
+Step 2. Add the dependency
+
+```gradle
+dependencies {
+        implementation 'com.github.Multiform-Validator:java:0.0.4'
+}
+```
+
+</details>
+<details>
+  <summary>Maven</summary>
+
+Step 1. Add the JitPack repository to your build file
 
 ```xml
 
@@ -29,14 +59,53 @@ follow the steps below to use the library in your project.
 </repositories>
 ```
 
+Step 2. Add the dependency
+
 ```xml
 
 <dependency>
-    <groupId>com.github.multiform-validator</groupId>
+    <groupId>com.github.Multiform-Validator</groupId>
     <artifactId>java</artifactId>
     <version>0.0.4</version>
 </dependency>
-```  
+```
+
+</details>
+<details>
+  <summary>Sbt</summary>
+
+Step 1. Add the JitPack repository to your build file
+Add it in your build.sbt at the end of resolvers:
+
+```sbt
+resolvers += "jitpack" at "https://jitpack.io"
+```
+
+Step 2. Add the dependency
+
+```sbt
+libraryDependencies += "com.github.Multiform-Validator" % "java" % "0.0.4"
+```
+
+</details>
+
+<details>
+  <summary>Leiningen</summary>
+
+Step 1. Add the JitPack repository to your build file
+Add it in your project.clj at the end of repositories:
+
+```clojure
+:repositories [["jitpack" "https://jitpack.io"]]
+```
+
+Step 2. Add the dependency
+
+```clojure
+:dependencies [[com.github.Multiform-Validator/java "0.0.4"]]
+```
+
+</details>
 
 ## Available methods - JAVA (0.0.4)v
 

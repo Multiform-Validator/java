@@ -9,24 +9,7 @@
 
 follow the steps below to use the library in your project.
 
-- [jitpack.io](https://jitpack.io/#Multiform-Validator/java) - Add the repository in your pom.xml
-
-```xml
-<repositories>
-    <repository>
-        <id>jitpack.io</id>
-        <url>https://jitpack.io</url>
-    </repository>
-</repositories>
-```
-
-```xml
-<dependency>
-    <groupId>com.github.multiform-validator</groupId>
-    <artifactId>java</artifactId>
-    <version>0.0.4</version>
-</dependency>
-```
+- [jitpack.io](https://jitpack.io/#Multiform-Validator/java)
 
 ## Documentation
 
