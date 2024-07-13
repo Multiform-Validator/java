@@ -32,10 +32,10 @@ public class Main {
     public static void main(String[] args) {
         File file = new File("src/main/resources/audio.mp3");
         System.out.println(isValidAudio(file)); // true | false
-        
+
         exampleExcludingExtensions();
     }
-    
+
     public static void exampleExcludingExtensions() {
         File file = new File("src/main/resources/audio.mp3");
         String[] audioExtensions = {"mp3"};
@@ -55,17 +55,17 @@ public class Main {
     public static void main(String[] args) {
         File file = new File("src/main/resources/image.png");
         System.out.println(isValidImage(file)); // true | false
-        
+
         exampleExcludingExtensions();
         example2ExcludingExtensions();
     }
-    
+
     public static void exampleExcludingExtensions() {
         File file = new File("src/main/resources/image.png");
         String[] imageExtensions = {"ico", "jpeg", "png"};
         System.out.println(isValidImage(file, imageExtensions)); // false
     }
-    
+
     public static void example2ExcludingExtensions() {
         File file = new File("src/main/resources/image.png");
         String[] imageExtensions = {"ico", "jpeg"};

@@ -57,3 +57,9 @@ H
 docs/classes/Validate.md,f\1\f1a6ae1a81b2873e9d16979d220bb8e583eeed3c
 I
 docs/classes/Validator.md,e\3\e39d43ca39384f3ae643880ba15c91da9db36261
+?
+CONTRIBUTING.md,3\f\3f454a98e586d1aa0d322e19afd5e67e08f2d3c8
+B
+CODE_OF_CONDUCT.md,0\8\0834ae016f8fea5cff771880c0be1d55299732ff
+;
+SECURITY.md,7\c\7c875fef54268bc433a7fc46aa5fd6e96d58f32f

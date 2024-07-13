@@ -29,7 +29,7 @@ public class CnpjValidator {
     /**
      * Calculate the second verifier digit of a CNPJ
      *
-     * @param cnpjBase an array of integers with the first 12 digits of a CNPJ
+     * @param cnpjBase      an array of integers with the first 12 digits of a CNPJ
      * @param firstVerifier the first verifier digit
      * @return the second verifier digit
      */

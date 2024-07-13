@@ -2,8 +2,11 @@ package io.github.multiform_validator;
 
 import org.jetbrains.annotations.NotNull;
 
-import java.util.*;
-import java.util.regex.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import static io.github.multiform_validator.Validator.isEmail;
 

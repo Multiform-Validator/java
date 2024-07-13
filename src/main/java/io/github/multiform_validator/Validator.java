@@ -1,8 +1,10 @@
 package io.github.multiform_validator;
 
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Set;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
+import java.util.*;
 import java.util.regex.Pattern;
 
 public class Validator {
@@ -88,19 +90,70 @@ public class Validator {
     // ##############################################################################################################
     // isDate
 
+    private static final List<DateTimeFormatter> DATE_FORMATTERS = Arrays.asList(
+            DateTimeFormatter.ofPattern("yyyy-MM-dd"),
+            DateTimeFormatter.ofPattern("MM/dd/yyyy"),
+            DateTimeFormatter.ofPattern("dd-MM-yyyy"),
+            DateTimeFormatter.ofPattern("yyyy/MM/dd"),
+            DateTimeFormatter.ofPattern("dd.MM.yyyy"),
+            DateTimeFormatter.ofPattern("yyyy.MM.dd"),
+            DateTimeFormatter.ofPattern("dd-MMM-yyyy", Locale.ENGLISH),
+            DateTimeFormatter.ofPattern("dd-MMMM-yyyy", Locale.ENGLISH),
+            DateTimeFormatter.ofPattern("dd-MMM-yy", Locale.ENGLISH),
+            DateTimeFormatter.ofPattern("dd-MMMM-yy", Locale.ENGLISH)
+    );
+
+    private static final List<DateTimeFormatter> DATE_TIME_FORMATTERS = Arrays.asList(
+            DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss"),
+            DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"),
+            DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss"),
+            DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss"),
+            DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm:ss"),
+            DateTimeFormatter.ofPattern("yyyy.MM.dd HH:mm:ss"),
+            DateTimeFormatter.ofPattern("dd-MMM-yyyy HH:mm:ss", Locale.ENGLISH),
+            DateTimeFormatter.ofPattern("dd-MMMM-yyyy HH:mm:ss", Locale.ENGLISH),
+            DateTimeFormatter.ofPattern("dd-MMM-yy HH:mm:ss", Locale.ENGLISH),
+            DateTimeFormatter.ofPattern("dd-MMMM-yy HH:mm:ss", Locale.ENGLISH)
+    );
+
     /**
-     * Checks if the given string is a valid date in the format "yyyy-MM-dd".
+     * Checks if the given string is a valid date.
+     * The date can be in the following formats:
      *
-     * @param date the string to be checked
+     * @param dateStr the string to be checked
      * @return true if the string is a valid date, false otherwise
-     * @throws IllegalArgumentException if the input value is null or empty
      */
-    public static boolean isDate(String date) {
-        if (date == null || date.isEmpty()) {
-            throw new IllegalArgumentException(INPUT_VALUE_CANNOT_BE_EMPTY);
+    public static boolean isDate(String dateStr) {
+        if (dateStr == null || dateStr.isEmpty()) {
+            throw new IllegalArgumentException("Date string cannot be null or empty");
         }
 
-        return date.matches("^\\d{4}-\\d{2}-\\d{2}$");
+        for (DateTimeFormatter formatter : DATE_FORMATTERS) {
+            if (isValidFormat(dateStr, formatter, false)) {
+                return true;
+            }
+        }
+
+        for (DateTimeFormatter formatter : DATE_TIME_FORMATTERS) {
+            if (isValidFormat(dateStr, formatter, true)) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    private static boolean isValidFormat(String dateStr, DateTimeFormatter formatter, boolean isDateTime) {
+        try {
+            if (isDateTime) {
+                LocalDateTime.parse(dateStr, formatter);
+            } else {
+                LocalDate.parse(dateStr, formatter);
+            }
+            return true;
+        } catch (DateTimeParseException e) {
+            return false;
+        }
     }
 
     // ##############################################################################################################

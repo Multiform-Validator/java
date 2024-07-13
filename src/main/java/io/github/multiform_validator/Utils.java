@@ -3,7 +3,8 @@ package io.github.multiform_validator;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.*;
-import java.util.regex.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Utils {
     // Prevent instantiation
