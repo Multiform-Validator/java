@@ -43,3 +43,7 @@ $src/test/java/FileValidatorTest.java,6\e\6e481a8cc098ad8ab7f553fbd33042be7454e
 docs/README.md,9\f\9f7cbce127b94a94ee14460050fbff2ce58417d0
 ;
 docs/404.md,b\6\b6f27eeb3cb5e9201c2c6debd7aba2209523a60d
+M
+docs/classes/CnpjValidator.md,e\f\ef5c795fa997c1fde7572ebc50019a7f542b6de3
+L
+docs/classes/CpfValidator.md,3\7\37a2bd0ac1d596813e668677d4cda443af3c82b2
