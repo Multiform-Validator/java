@@ -30,3 +30,7 @@ replay_pid*
 *.dll
 *.bat
 *.msi
+
+# Other
+
+client_java

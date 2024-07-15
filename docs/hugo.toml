@@ -1,6 +1,7 @@
 baseURL = "http://localhost"
 languageCode = 'en-us'
 title = "Multiform Validator"
+theme = "hugo-geekdoc"
 
 pluralizeListTitles = false
 
@@ -12,7 +13,7 @@ disablePathToLower = true
 # geekdocFileTreeSortBy = "linkTitle"
 
 # Required if you want to render robots.txt template
-enableRobotsTXT = false
+enableRobotsTXT = true
 
 # Needed for mermaid shortcodes
 [markup]
