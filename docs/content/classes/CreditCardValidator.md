@@ -1,5 +1,3 @@
-# CreditCardValidator
-
 The `CreditCardValidator` class is used to validate credit card numbers. It has two methods, `isCreditCardValid`
 and `identifyCreditCard`.
 
@@ -47,5 +45,3 @@ public class Main {
 - [Utils](https://multiform-validator.github.io/java/classes/Utils)
 - [Validate](https://multiform-validator.github.io/java/classes/Validate)
 - [Validator](https://multiform-validator.github.io/java/classes/Validator)
-
-## Return to [Home](https://multiform-validator.github.io/java/)

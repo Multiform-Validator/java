@@ -1,5 +1,3 @@
-# CpfValidator
-
 The `CpfValidator` class is used to validate CPF numbers. It has a single method, `cpfIsValid`, which receives
 a `String` as a parameter and returns a `boolean` value.
 
@@ -28,5 +26,3 @@ public class Main {
 - [Utils](https://multiform-validator.github.io/java/classes/Utils)
 - [Validate](https://multiform-validator.github.io/java/classes/Validate)
 - [Validator](https://multiform-validator.github.io/java/classes/Validator)
-
-## Return to [Home](https://multiform-validator.github.io/java/)

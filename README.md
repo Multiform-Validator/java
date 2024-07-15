@@ -15,6 +15,10 @@ follow the steps below to use the library in your project.
 
 See the documentation for more information.
 
+- [Javadoc](https://multiform-validator.github.io/java/api/)
+
+or
+
 - [Multiform Validator - Web doc](https://multiform-validator.github.io/java/)
 
 or

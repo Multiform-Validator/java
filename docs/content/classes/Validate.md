@@ -1,5 +1,3 @@
-# Validate
-
 The `Validate` class is a utility class with some methods to validate data. It has the following methods:
 
 - validateEmail
@@ -79,5 +77,3 @@ public class Main {
 - [FileValidator](https://multiform-validator.github.io/java/classes/FileValidator)
 - [Utils](https://multiform-validator.github.io/java/classes/Utils)
 - [Validator](https://multiform-validator.github.io/java/classes/Validator)
-
-## Return to [Home](https://multiform-validator.github.io/java/)

@@ -1,5 +1,3 @@
-# Utils
-
 The `Utils` class is a utility class with some methods to help you with some common tasks. It has the following
 methods:
 
@@ -39,5 +37,3 @@ public class Main {
 - [FileValidator](https://multiform-validator.github.io/java/classes/FileValidator)
 - [Validate](https://multiform-validator.github.io/java/classes/Validate)
 - [Validator](https://multiform-validator.github.io/java/classes/Validator)
-
-## Return to [Home](https://multiform-validator.github.io/java/)

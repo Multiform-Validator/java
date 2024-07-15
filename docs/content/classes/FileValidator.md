@@ -1,5 +1,3 @@
-# FileValidator
-
 The `FileValidator` class is used to validate files. It has the following methods:
 
 - isValidAudio
@@ -112,5 +110,3 @@ public class Main {
 - [Utils](https://multiform-validator.github.io/java/classes/Utils)
 - [Validate](https://multiform-validator.github.io/java/classes/Validate)
 - [Validator](https://multiform-validator.github.io/java/classes/Validator)
-
-## Return to [Home](https://multiform-validator.github.io/java/)

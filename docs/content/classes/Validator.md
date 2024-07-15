@@ -1,5 +1,3 @@
-# Validator
-
 The `Validator` class is used to validate some common data types. It has the following methods:
 
 - isAscii
@@ -266,5 +264,3 @@ public class Main {
 - [FileValidator](https://multiform-validator.github.io/java/classes/FileValidator)
 - [Utils](https://multiform-validator.github.io/java/classes/Utils)
 - [Validate](https://multiform-validator.github.io/java/classes/Validate)
-
-## Return to [Home](https://multiform-validator.github.io/java/)
