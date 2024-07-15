@@ -1,0 +1,14 @@
+---
+more:
+  - name: JavaDoc
+    ref: "/java/api"
+    external: true
+    icon: "gdoc_bookmark"
+  - name: Releases
+    ref: "https://github.com/Multiform-Validator/java/releases"
+    external: true
+    icon: "gdoc_download"
+  - name: Github
+    ref: "https://github.com/Multiform-Validator/java"
+    external: true
+    icon: "gdoc_github"
