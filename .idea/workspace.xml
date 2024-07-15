@@ -4,7 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="22c9667a-e00d-49e2-aa6d-da35dd213aa7" name="Changes" comment="" />
+    <list default="true" id="22c9667a-e00d-49e2-aa6d-da35dd213aa7" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/5/15a6e0cffdd20108561c3ba173365425592a9cce" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/7/37a2bd0ac1d596813e668677d4cda443af3c82b2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/f/9f7cbce127b94a94ee14460050fbff2ce58417d0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/6/b6f27eeb3cb5e9201c2c6debd7aba2209523a60d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/8/d87f992b2bfe5407921c143a17dddc1c48818247" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/3/e39d43ca39384f3ae643880ba15c91da9db36261" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/f/ef5c795fa997c1fde7572ebc50019a7f542b6de3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/1/f1a6ae1a81b2873e9d16979d220bb8e583eeed3c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/c/fc5c40cf56bde0ed00f702912040d14c7a3d163d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/1/5/15a6e0cffdd20108561c3ba173365425592a9cce" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/3/7/37a2bd0ac1d596813e668677d4cda443af3c82b2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/9/f/9f7cbce127b94a94ee14460050fbff2ce58417d0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/b/6/b6f27eeb3cb5e9201c2c6debd7aba2209523a60d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/d/8/d87f992b2bfe5407921c143a17dddc1c48818247" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/e/3/e39d43ca39384f3ae643880ba15c91da9db36261" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/e/f/ef5c795fa997c1fde7572ebc50019a7f542b6de3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/f/1/f1a6ae1a81b2873e9d16979d220bb8e583eeed3c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/f/c/fc5c40cf56bde0ed00f702912040d14c7a3d163d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -35,39 +57,39 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "Application.io.github.gabriel_logan.multiform_validator.Main.executor": "Run",
-    "Application.io.github.multiform_validator.Main.executor": "Run",
-    "JUnit.AsciiTest.executor": "Run",
-    "JUnit.CnpjValidatorTest.executor": "Run",
-    "JUnit.CpfValidatorTest.executor": "Run",
-    "JUnit.CpfValidatorTest.testNullCpf.executor": "Run",
-    "JUnit.CreditCardValidatorTest.executor": "Run",
-    "JUnit.CreditCardValidatorTest.testIdentifyFlagCard.executor": "Debug",
-    "JUnit.EmailValidatorTest.executor": "Run",
-    "JUnit.FileValidatorTest.executor": "Run",
-    "JUnit.MainTest.executor": "Run",
-    "JUnit.SimpleMathTest.executor": "Run",
-    "JUnit.UtilsTest.executor": "Run",
-    "JUnit.ValidateTest.executor": "Run",
-    "JUnit.ValidatorTest.executor": "Run",
-    "JUnit.ValidatorTest.testIsDate.executor": "Debug",
-    "Maven.multiform-validator [package].executor": "Run",
-    "Maven.multiform-validator [test].executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.io.github.gabriel_logan.multiform_validator.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.io.github.multiform_validator.Main.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AsciiTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CnpjValidatorTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CpfValidatorTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CpfValidatorTest.testNullCpf.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CreditCardValidatorTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CreditCardValidatorTest.testIdentifyFlagCard.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.EmailValidatorTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.FileValidatorTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MainTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SimpleMathTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UtilsTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ValidateTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ValidatorTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ValidatorTest.testIsDate.executor&quot;: &quot;Debug&quot;,
+    &quot;Maven.multiform-validator [package].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.multiform-validator [test].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="corretto-11" />
