@@ -63,3 +63,5 @@ B
 CODE_OF_CONDUCT.md,0\8\0834ae016f8fea5cff771880c0be1d55299732ff
 ;
 SECURITY.md,7\c\7c875fef54268bc433a7fc46aa5fd6e96d58f32f
+J
+.github/workflows/hugo.yml,9\7\973f087bcce0bd4ddf1d12f62631e6d46de1a1d5
