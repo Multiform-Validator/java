@@ -8,9 +8,9 @@ import java.util.stream.Collectors;
 import org.jetbrains.annotations.NotNull;
 
 public class EmailDelegate {
-		private EmailDelegate() {
-			throw new IllegalStateException("Utility class");
-		}
+  private EmailDelegate() {
+    throw new IllegalStateException("Utility class");
+  }
 
   /** The default list of valid email domains. */
   protected static final List<String> VALID_DOMAINS =
