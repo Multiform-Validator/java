@@ -13,19 +13,19 @@ methods:
 ### getOnlyEmail
 
 ```java
-import io.github.multiform_validator.Utils;
+
 
 public class Main {
-    public static void main(String[] args) {
-        String msg1 = "This is a message example with foo@bar.com email to test";
-        System.out.println(Utils.getOnlyEmail(msg1, null)); // foo@bar.com
+		public static void main(String[] args) {
+				String msg1 = "This is a message example with foo@bar.com email to test";
+				System.out.println(Utils.getOnlyEmail(msg1, null)); // foo@bar.com
 
-        String msg2 = "Example two foo1@bar.com and foo2@bar.com";
-        // With options
-        Utils.GetOnlyEmailOptionsParams options = new Utils.GetOnlyEmailOptionsParams();
-        options.setMultiple(true);
-        System.out.println(Utils.getOnlyEmailWithOptions(msg2, options)); // [foo1@bar.com, foo2@bar.com]
-    }
+				String msg2 = "Example two foo1@bar.com and foo2@bar.com";
+				// With options
+				Utils.OnlyEmailParams options = new Utils.OnlyEmailParams();
+				options.setMultiple(true);
+				System.out.println(Utils.getOnlyEmailWithOptions(msg2, options)); // [foo1@bar.com, foo2@bar.com]
+		}
 }
 ```
 

@@ -6,34 +6,34 @@ and `identifyCreditCard`.
 ### isCreditCardValid
 
 ```java
-import io.github.multiform_validator.CreditCardValidator;
+import io.github.multiform_validator.identity.CreditCardValidator;
 
 public class Main {
-    public static void main(String[] args) {
-        valid();
-        invalid();
-    }
-    
-    private static void valid() {
-        System.out.println(CreditCardValidator.isCreditCardValid("4532 8770 0040 4166")); // true
-    }
-    
-    private static void invalid() {
-        System.out.println(CreditCardValidator.isCreditCardValid("4532 8770 0040 4167")); // false
-    }
+		public static void main(String[] args) {
+				valid();
+				invalid();
+		}
+
+		private static void valid() {
+				System.out.println(CreditCardValidator.isCreditCardValid("4532 8770 0040 4166")); // true
+		}
+
+		private static void invalid() {
+				System.out.println(CreditCardValidator.isCreditCardValid("4532 8770 0040 4167")); // false
+		}
 }
 ```
 
 ### identifyCreditCard
 
 ```java
-import io.github.multiform_validator.CreditCardValidator;
+import io.github.multiform_validator.identity.CreditCardValidator;
 
 public class Main {
-    public static void main(String[] args) {
-        String creditCard = "4532 8770 0040 4166";
-        System.out.println(CreditCardValidator.identifyCreditCard(creditCard)); // Visa
-    }
+		public static void main(String[] args) {
+				String creditCard = "4532 8770 0040 4166";
+				System.out.println(CreditCardValidator.identifyCreditCard(creditCard)); // Visa
+		}
 }
 ```
 
