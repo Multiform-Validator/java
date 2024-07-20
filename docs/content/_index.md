@@ -135,14 +135,14 @@ Step 2. Add the dependency
 ```java
 // You can import the class or use the full path
 
-import io.github.multiform_validator.CnpjValidator;
+import io.github.multiform_validator.identity.CnpjValidator;
 
 public class Main {
-    public static void main(String[] args) {
-        String cnpjTrue = "69.807.668/0001-41";
-        String cnpjFalse = "61.807.661/0001-48";
-        System.out.println(CnpjValidator.cnpjIsValid(cnpjTrue)); // true
-        System.out.println(CnpjValidator.cnpjIsValid(cnpjFalse)); // false
-    }
+		public static void main(String[] args) {
+				String cnpjTrue = "69.807.668/0001-41";
+				String cnpjFalse = "61.807.661/0001-48";
+				System.out.println(CnpjValidator.cnpjIsValid(cnpjTrue)); // true
+				System.out.println(CnpjValidator.cnpjIsValid(cnpjFalse)); // false
+		}
 }
 ```

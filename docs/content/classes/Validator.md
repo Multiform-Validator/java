@@ -160,27 +160,6 @@ public class Main {
 }
 ```
 
-### isNumber
-
-```java
-import static io.github.multiform_validator.Validator.isNumber;
-
-public class Main {
-    public static void main(String[] args) {
-        valid();
-        invalid();
-    }
-
-    private static void valid() {
-        System.out.println(isNumber("123")); // true
-    }
-
-    private static void invalid() {
-        System.out.println(isNumber("123a")); // false
-    }
-}
-```
-
 ### isPort
 
 ```java

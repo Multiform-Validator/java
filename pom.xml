@@ -2,96 +2,110 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
+  <modelVersion>4.0.0</modelVersion>
 
-    <groupId>io.github</groupId>
-    <artifactId>multiform-validator</artifactId>
-    <version>0.0.5</version>
+  <groupId>io.github</groupId>
+  <artifactId>multiform-validator</artifactId>
+  <version>0.0.5</version>
 
-    <name>Multiform Validator</name>
-    <description>
-        Multilingual library made for validation, various form fields, such as: email, cpf, cnpj, credit card and much
+  <name>Multiform Validator</name>
+  <description>
+    Multilingual library made for validation, various form fields, such as: email, cpf, cnpj, credit card and much
         more.
     </description>
-    <url>https://github.com/Multiform-Validator/java/</url>
-    <licenses>
-        <license>
-            <name>Apache License 2.0</name>
-            <url>https://github.com/Multiform-Validator/java/blob/main/LICENSE</url>
-        </license>
-    </licenses>
-    <developers>
-        <developer>
-            <name>Gabriel Logan</name>
-        </developer>
-    </developers>
+  <url>https://github.com/Multiform-Validator/java/</url>
+  <licenses>
+    <license>
+      <name>Apache License 2.0</name>
+      <url>https://github.com/Multiform-Validator/java/blob/main/LICENSE</url>
+    </license>
+  </licenses>
+  <developers>
+    <developer>
+      <name>Gabriel Logan</name>
+    </developer>
+  </developers>
 
-    <properties>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
+  <distributionManagement>
+    <repository>
+      <id>github</id>
+      <name>GitHub multiform-validator Apache Maven Packages</name>
+      <url>https://maven.pkg.github.com/multiform-validator/java</url>
+    </repository>
+  </distributionManagement>
 
-    <dependencies>
-        <dependency>
-            <groupId>org.jetbrains</groupId>
-            <artifactId>annotations</artifactId>
-            <version>24.1.0</version>
-            <scope>compile</scope>
-        </dependency>
+  <properties>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
 
-        <!-- JUnit Jupiter API -->
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-api</artifactId>
-            <version>5.7.0</version>
-            <scope>test</scope>
-        </dependency>
-        <!-- JUnit Jupiter Engine -->
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-engine</artifactId>
-            <version>5.7.0</version>
-            <scope>test</scope>
-        </dependency>
-    </dependencies>
+  <dependencies>
+    <dependency>
+      <groupId>org.jetbrains</groupId>
+      <artifactId>annotations</artifactId>
+      <version>24.1.0</version>
+      <scope>compile</scope>
+    </dependency>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>2.22.2</version>
-                <configuration>
-                    <includes>
-                        <include>**/*Test.java</include>
-                        <include>**/*Tests.java</include>
-                    </includes>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-javadoc-plugin</artifactId>
-                <version>3.7.0</version>
-                <executions>
-                    <execution>
-                        <id>attach-javadocs</id>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>jar</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>
-    </build>
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <version>1.18.34</version>
+      <scope>provided</scope>
+    </dependency>
 
-    <distributionManagement>
-        <repository>
-            <id>github</id>
-            <name>GitHub multiform-validator Apache Maven Packages</name>
-            <url>https://maven.pkg.github.com/multiform-validator/java</url>
-        </repository>
-    </distributionManagement>
+    <!-- JUnit Jupiter API -->
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-api</artifactId>
+      <version>5.10.3</version>
+      <scope>test</scope>
+    </dependency>
+    <!-- JUnit Jupiter Engine -->
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-engine</artifactId>
+      <version>5.10.3</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+  <repositories>
+    <repository>
+      <id>maven_central</id>
+      <name>Maven Central</name>
+      <url>https://repo.maven.apache.org/maven2/</url>
+    </repository>
+  </repositories>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>2.22.2</version>
+        <configuration>
+          <includes>
+            <include>**/*Test.java</include>
+            <include>**/*Tests.java</include>
+          </includes>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <version>3.7.0</version>
+        <executions>
+          <execution>
+            <id>attach-javadocs</id>
+            <phase>package</phase>
+            <goals>
+              <goal>jar</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
 
 </project>

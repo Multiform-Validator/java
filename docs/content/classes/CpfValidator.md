@@ -6,15 +6,15 @@ a `String` as a parameter and returns a `boolean` value.
 ```java
 // You can also import the method as static or use the full path
 
-import static io.github.multiform_validator.CpfValidator.cpfIsValid;
+import static io.github.multiform_validator.identity.CpfValidator.cpfIsValid;
 
 public class Main {
-    public static void main(String[] args) {
-        String cpfTrue = "123.456.789-09";
-        String cpfFalse = "123.456.789-10";
-        System.out.println(cpfIsValid(cpfTrue)); // true
-        System.out.println(cpfIsValid(cpfFalse)); // false
-    }
+		public static void main(String[] args) {
+				String cpfTrue = "123.456.789-09";
+				String cpfFalse = "123.456.789-10";
+				System.out.println(cpfIsValid(cpfTrue)); // true
+				System.out.println(cpfIsValid(cpfFalse)); // false
+		}
 }
 ```
 
